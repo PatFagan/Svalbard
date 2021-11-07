@@ -33,7 +33,7 @@ public class DialogueScript : MonoBehaviour
             if (hello == true)
             {
                 dialogueBox.text += letter;
-                yield return new WaitForSeconds(.05f);
+                yield return new WaitForSeconds(.025f);
             }
         }
     }
