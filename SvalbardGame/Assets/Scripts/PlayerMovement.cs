@@ -54,14 +54,4 @@ public class PlayerMovement : MonoBehaviour
                 sprintGauge++;
         }
     }
-
-    // safe zone triggers
-    void OnTriggerStay2D(Collider2D collider)
-    {
-        // when in a safezone, become immune
-        if (collider.gameObject.tag == "SafeZone") // if collides with water, slow down
-        {
-            //invincibilityTimer = 1f;
-        }
-    }
 }

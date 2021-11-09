@@ -11,6 +11,8 @@ public class DialogueScript : MonoBehaviour
     int index;
     bool hello = false;
     public int indexCap; // add to cap when certain criteria are met in game
+    public AudioSource[] voiceActing;
+    public AudioSource farewellAudio;
 
     public void StartDialogue()
     {
@@ -22,12 +24,14 @@ public class DialogueScript : MonoBehaviour
     public void EndDialogue()
     {
         hello = false;
+        farewellAudio.Play();
         dialogueBox.text = farewellDialogue;
         StartCoroutine(CloseDialogue());
     }
 
     IEnumerator LoadDialogue()
     {
+        voiceActing[index].Play();
         foreach(char letter in sentences[index].ToCharArray())
         {
             if (hello == true)
