@@ -103,7 +103,6 @@ public class DialogueScript : MonoBehaviour
     IEnumerator CloseDialogue()
     {
         yield return new WaitForSeconds(2f);
-        print("broken");
         dialogueBox.text = "";
     }
 }
