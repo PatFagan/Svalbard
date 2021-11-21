@@ -65,7 +65,9 @@ public class DialogueScript : MonoBehaviour
                 yield return new WaitForSeconds(.01f);
             }
             else
+            {
                 break;
+            }
         }
         ShowQuestStatus();
     }
@@ -101,6 +103,7 @@ public class DialogueScript : MonoBehaviour
     IEnumerator CloseDialogue()
     {
         yield return new WaitForSeconds(2f);
+        print("broken");
         dialogueBox.text = "";
     }
 }
