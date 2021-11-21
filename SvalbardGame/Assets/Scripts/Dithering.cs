@@ -8,7 +8,7 @@ public class Dithering : MonoBehaviour
 
     IEnumerator FadeOut()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 50; i++)
         {
             spriteRenderer.color -= new Color(0, 0, 0, Time.deltaTime);
             yield return new WaitForSeconds(.005f);
@@ -17,7 +17,7 @@ public class Dithering : MonoBehaviour
 
     IEnumerator FadeIn()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 50; i++)
         {
             spriteRenderer.color += new Color(0, 0, 0, Time.deltaTime);
             yield return new WaitForSeconds(.005f);

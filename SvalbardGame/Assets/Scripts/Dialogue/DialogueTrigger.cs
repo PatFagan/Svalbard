@@ -7,17 +7,18 @@ public class DialogueTrigger : MonoBehaviour
     public string npcName;
     public int indexIncrease;
 
-    DialogueScript dialogueScript;
+    DialogueIndices dialogueIndicesScript;
     void Start()
     {
-        dialogueScript = GameObject.Find(npcName).GetComponent<DialogueScript>();
+        dialogueIndicesScript = GameObject.Find(npcName).GetComponent<DialogueIndices>();
     }
 
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
         {
-            dialogueScript.indexCap += indexIncrease;
+            dialogueIndicesScript.indexCap += indexIncrease;
+            dialogueIndicesScript.index++;
             Destroy(gameObject);
         }
     }
