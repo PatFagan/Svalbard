@@ -1003,7 +1003,6 @@ GameObject:
   - component: {fileID: 1302826675}
   - component: {fileID: 1302826673}
   - component: {fileID: 1302826670}
-  - component: {fileID: 1302826676}
   m_Layer: 0
   m_Name: Skellies
   m_TagString: Untagged
@@ -1022,8 +1021,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 37.29234, y: 27.86, z: 20.8}
-  m_Center: {x: 0, y: 0, z: -0.1}
+  m_Size: {x: 43.191917, y: 27.86, z: 38.974777}
+  m_Center: {x: 0, y: 0, z: -9.187393}
 --- !u!212 &1302826671
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1157,19 +1156,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 0
   indexCap: 5
---- !u!65 &1302826676
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302826669}
-  m_Material: {fileID: 13400000, guid: d642b394c1e46d44eb5a9ef0aa1a2cd0, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 37.29234, y: 27.86, z: 6.942018}
-  m_Center: {x: 0, y: 0, z: -3.371009}
 --- !u!1 &1382187703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,6 +1883,7 @@ GameObject:
   - component: {fileID: 6652274659479486704}
   - component: {fileID: 5410557402448540134}
   - component: {fileID: 2479839595664162368}
+  - component: {fileID: 94227776932328811}
   m_Layer: 0
   m_Name: DitheringZone
   m_TagString: Untagged
@@ -1904,6 +1891,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &94227776932328811
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94227776932328810}
+  m_Material: {fileID: 13400000, guid: d642b394c1e46d44eb5a9ef0aa1a2cd0, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 37.29234, y: 27.86, z: 6.942018}
+  m_Center: {x: 0, y: 0, z: -3.371009}
 --- !u!114 &663971093408946490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1941,6 +1941,7 @@ GameObject:
   - component: {fileID: 8578634114400102282}
   - component: {fileID: 6938612724495029916}
   - component: {fileID: 663971093408946490}
+  - component: {fileID: 3031500212796428817}
   m_Layer: 0
   m_Name: DitheringZone
   m_TagString: Untagged
@@ -1948,6 +1949,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &3031500212796428817
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3031500212796428816}
+  m_Material: {fileID: 13400000, guid: d642b394c1e46d44eb5a9ef0aa1a2cd0, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 10, z: 2.8476882}
+  m_Center: {x: 0, y: 0, z: -1.3238442}
 --- !u!114 &3124599601787677128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2027,8 +2041,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16.542667, y: 27.86, z: 13.133825}
-  m_Center: {x: 0, y: 0, z: -3.1469126}
+  m_Size: {x: 23.01481, y: 27.86, z: 24.12458}
+  m_Center: {x: 0, y: 0, z: -8.64229}
 --- !u!212 &3124599601787677141
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2094,7 +2108,6 @@ GameObject:
   - component: {fileID: 3124599601787677128}
   - component: {fileID: 3124599601787677144}
   - component: {fileID: 3124599601787677131}
-  - component: {fileID: 3124599601787677145}
   m_Layer: 0
   m_Name: Cartographer
   m_TagString: Untagged
@@ -2116,19 +2129,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 0
   indexCap: 5
---- !u!65 &3124599601787677145
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3124599601787677143}
-  m_Material: {fileID: 13400000, guid: d642b394c1e46d44eb5a9ef0aa1a2cd0, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 10, z: 2.8476882}
-  m_Center: {x: 0, y: 0, z: -1.3238442}
 --- !u!114 &3798776014671241682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2250,7 +2250,7 @@ PrefabInstance:
     - target: {fileID: 6796507047282844396, guid: b957d41e3a0965a45b3038465df66aaa,
         type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6796507047282844396, guid: b957d41e3a0965a45b3038465df66aaa,
         type: 3}

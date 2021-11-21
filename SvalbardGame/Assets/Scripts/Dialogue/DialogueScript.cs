@@ -64,6 +64,8 @@ public class DialogueScript : MonoBehaviour
                 dialogueBox.text += letter;
                 yield return new WaitForSeconds(.01f);
             }
+            else
+                break;
         }
         ShowQuestStatus();
     }
