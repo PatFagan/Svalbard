@@ -77,15 +77,8 @@ public class DialogueScript : MonoBehaviour
         voiceActing[dialogueIndicesScript.index].Play();
         foreach (char letter in sentences[dialogueIndicesScript.index].ToCharArray())
         {
-            if (nearNPC == true)
-            {
-                dialogueBox.text += letter;
-                yield return new WaitForSeconds(.01f);
-            }
-            else
-            {
-                break;
-            }
+            dialogueBox.text += letter;
+            yield return new WaitForSeconds(.01f);
         }
         CheckQuestStatus(dialogueIndicesScript.index);
     }
