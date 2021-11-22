@@ -6,21 +6,27 @@ using UnityEngine.UI;
 
 public class DialogueScript : MonoBehaviour
 {
+    TMP_Text questText;
+    TMP_Text dialogueBox;
+    Image currentCharacter;
+    public GameObject vendorButton;
+
     bool nearNPC = false;
-    public TMP_Text questText;
-    public TMP_Text dialogueBox;
     public string[] sentences;
     public AudioSource[] voiceActing;
+    public Sprite[] characterImages;
     public string farewellDialogue;
     public AudioSource farewellAudio;
     public int[] questUpdates;
 
-    public Sprite[] characterImages;
-    public Image currentCharacter;
-
     DialogueIndices dialogueIndicesScript;
     void Start()
     {
+        questText = GameObject.Find("QuestText").GetComponent<TMP_Text>();
+        dialogueBox = GameObject.Find("Dialogue").GetComponent<TMP_Text>();
+        currentCharacter = GameObject.Find("CharacterImage").GetComponent<Image>();
+        //vendorButton = GameObject.Find("EnterVendorButton");
+
         dialogueIndicesScript = gameObject.GetComponent<DialogueIndices>();
     }
 
@@ -31,6 +37,8 @@ public class DialogueScript : MonoBehaviour
         currentCharacter.sprite = characterImages[dialogueIndicesScript.index];
         currentCharacter.enabled = true;
         StartCoroutine(LoadDialogue());
+        if (vendorButton)
+            vendorButton.SetActive(true);
     }
 
     public void EndDialogue()
@@ -40,6 +48,8 @@ public class DialogueScript : MonoBehaviour
         dialogueBox.text = farewellDialogue;
         currentCharacter.enabled = false;
         StartCoroutine(CloseDialogue());
+        if (vendorButton) 
+            vendorButton.SetActive(false);
     }
 
     // check to see if a quest has been updated
