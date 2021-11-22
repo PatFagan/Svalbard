@@ -10,6 +10,7 @@ public class DialogueScript : MonoBehaviour
     TMP_Text dialogueBox;
     Image currentCharacter;
     public GameObject vendorButton;
+    public GameObject vendorMenu;
 
     bool nearNPC = false;
     public string[] sentences;
@@ -25,7 +26,7 @@ public class DialogueScript : MonoBehaviour
         questText = GameObject.Find("QuestText").GetComponent<TMP_Text>();
         dialogueBox = GameObject.Find("Dialogue").GetComponent<TMP_Text>();
         currentCharacter = GameObject.Find("CharacterImage").GetComponent<Image>();
-        //vendorButton = GameObject.Find("EnterVendorButton");
+        //vendorMenu = GameObject.Find("VendorMenu");
 
         dialogueIndicesScript = gameObject.GetComponent<DialogueIndices>();
     }
@@ -43,13 +44,7 @@ public class DialogueScript : MonoBehaviour
 
     public void EndDialogue()
     {
-        nearNPC = false;
-        farewellAudio.Play();
-        dialogueBox.text = farewellDialogue;
-        currentCharacter.enabled = false;
         StartCoroutine(CloseDialogue());
-        if (vendorButton) 
-            vendorButton.SetActive(false);
     }
 
     // check to see if a quest has been updated
@@ -87,8 +82,11 @@ public class DialogueScript : MonoBehaviour
         voiceActing[dialogueIndicesScript.index].Play();
         foreach (char letter in sentences[dialogueIndicesScript.index].ToCharArray())
         {
-            dialogueBox.text += letter;
-            yield return new WaitForSeconds(.01f);
+            if (nearNPC == true)
+            {
+                dialogueBox.text += letter;
+                yield return new WaitForSeconds(.01f);
+            }
         }
         CheckQuestStatus(dialogueIndicesScript.index);
     }
@@ -123,7 +121,18 @@ public class DialogueScript : MonoBehaviour
 
     IEnumerator CloseDialogue()
     {
+        nearNPC = false;
+        farewellAudio.Play();
+        dialogueBox.text = farewellDialogue;
+        if (vendorButton)
+            vendorButton.SetActive(false);
+        if (vendorMenu)
+            vendorMenu.SetActive(false);
         yield return new WaitForSeconds(2f);
-        dialogueBox.text = "";
+        if (nearNPC == false)
+        {
+            dialogueBox.text = "";
+            currentCharacter.enabled = false;
+        }
     }
 }

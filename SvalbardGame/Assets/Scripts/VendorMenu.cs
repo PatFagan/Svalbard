@@ -6,18 +6,18 @@ using UnityEngine.UI;
 public class VendorMenu : MonoBehaviour
 {
     public GameObject vendorMenu;
-    bool vendorMenuBool = true;
+    bool vendorMenuBool = false;
     public Button vendorButton;
 
     void Start()
     {
+        //vendorMenu = GameObject.Find("VendorMenu");
         vendorButton.onClick.AddListener(OpenVendorMenu);
     }
 
     public void OpenVendorMenu()
     {
-        //vendorMenuBool = !vendorMenuBool;
-        print("barter");
+        vendorMenuBool = !vendorMenuBool;
         vendorMenu.SetActive(vendorMenuBool);
     }
 }
