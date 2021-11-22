@@ -22,7 +22,6 @@ public class StartDialogue : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            print("broken");
             dialogueScript.EndDialogue();
         }
     }

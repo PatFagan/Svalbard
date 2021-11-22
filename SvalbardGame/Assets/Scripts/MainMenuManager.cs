@@ -9,6 +9,9 @@ public class MainMenuManager : MonoBehaviour
     public Button startButton, exitButton;
     public string nextScene;
 
+    public Image fade;
+    public Animator fadeAnim;
+
     void Start()
     {
         startButton.onClick.AddListener(StartButton);
@@ -29,11 +32,18 @@ public class MainMenuManager : MonoBehaviour
 
     void StartButton()
     {
-        SceneManager.LoadScene(nextScene);
+        StartCoroutine(Fading(nextScene));
     }
 
     void ExitButton()
     {
         Application.Quit();
+    }
+
+    IEnumerator Fading(string nextScene)
+    {
+        fadeAnim.SetBool("fade", true);
+        yield return new WaitUntil(() => fade.color.a == 1);
+        SceneManager.LoadScene(nextScene);
     }
 }

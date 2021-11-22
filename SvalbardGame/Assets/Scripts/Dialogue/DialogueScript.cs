@@ -13,6 +13,7 @@ public class DialogueScript : MonoBehaviour
     public AudioSource[] voiceActing;
     public string farewellDialogue;
     public AudioSource farewellAudio;
+    public int[] questUpdates;
 
     public Sprite[] characterImages;
     public Image currentCharacter;
@@ -41,17 +42,34 @@ public class DialogueScript : MonoBehaviour
         StartCoroutine(CloseDialogue());
     }
 
-    public void ShowQuestStatus()
+    // check to see if a quest has been updated
+    public void CheckQuestStatus(int currentIndex)
     {
-        StartCoroutine(QuestStatus(dialogueIndicesScript.index));
+        for (int i = 0; i < questUpdates.Length; i++)
+        {
+            if (currentIndex == questUpdates[i])
+            {
+                StartCoroutine(ShowQuestStatus(1));
+            }
+        }
     }
 
-    IEnumerator QuestStatus(int currentIndex)
+    // if one has, display the update
+    IEnumerator ShowQuestStatus(int status)
     {
-        if (currentIndex == 5)
-            questText.text = "FAVOR EARNED";
-        yield return new WaitForSeconds(3f);
-        questText.text = "";
+        switch(status)
+        {
+            case 1:
+                questText.text = "FAVOR EARNED";
+                yield return new WaitForSeconds(3f);
+                questText.text = "";
+                break;
+            default:
+                questText.text = "QUEST UPDATED";
+                yield return new WaitForSeconds(3f);
+                questText.text = "";
+                break;
+        }
     }
 
     IEnumerator LoadDialogue()
@@ -69,7 +87,7 @@ public class DialogueScript : MonoBehaviour
                 break;
             }
         }
-        ShowQuestStatus();
+        CheckQuestStatus(dialogueIndicesScript.index);
     }
 
     public void NextLine()
