@@ -120,7 +120,6 @@ public class DialogueScript : MonoBehaviour
     IEnumerator CloseDialogue()
     {
         nearNPC = false;
-        timer = 2f;
         if (nearNPC == false)
         {
             farewellAudio.Play();
@@ -130,9 +129,10 @@ public class DialogueScript : MonoBehaviour
                 vendorButton.SetActive(false);
             if (vendorMenu)
                 vendorMenu.SetActive(false);
+            timer = 200f;
             yield return new WaitUntil(() => nearNPC == true || timer == 0);
             dialogueBox.text = "";
-        }        
+        }
     }
 
     // dialogue start and end triggers
