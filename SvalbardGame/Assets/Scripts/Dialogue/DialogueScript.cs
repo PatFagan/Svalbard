@@ -20,6 +20,8 @@ public class DialogueScript : MonoBehaviour
     public AudioSource farewellAudio;
     public int[] questUpdates;
 
+    float timer;
+
     DialogueIndices dialogueIndicesScript;
     void Start()
     {
@@ -40,11 +42,6 @@ public class DialogueScript : MonoBehaviour
         StartCoroutine(LoadDialogue());
         if (vendorButton)
             vendorButton.SetActive(true);
-    }
-
-    public void EndDialogue()
-    {
-        StartCoroutine(CloseDialogue());
     }
 
     // check to see if a quest has been updated
@@ -117,22 +114,41 @@ public class DialogueScript : MonoBehaviour
                 NextLine();
             }
         }
+        timer--;
     }
 
     IEnumerator CloseDialogue()
     {
         nearNPC = false;
-        farewellAudio.Play();
-        dialogueBox.text = farewellDialogue;
-        if (vendorButton)
-            vendorButton.SetActive(false);
-        if (vendorMenu)
-            vendorMenu.SetActive(false);
-        yield return new WaitForSeconds(2f);
+        timer = 2f;
         if (nearNPC == false)
         {
-            dialogueBox.text = "";
+            farewellAudio.Play();
+            dialogueBox.text = farewellDialogue;
             currentCharacter.enabled = false;
+            if (vendorButton)
+                vendorButton.SetActive(false);
+            if (vendorMenu)
+                vendorMenu.SetActive(false);
+            yield return new WaitUntil(() => nearNPC == true || timer == 0);
+            dialogueBox.text = "";
+        }        
+    }
+
+    // dialogue start and end triggers
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            StartDialogue();
+        }
+    }
+
+    void OnTriggerExit(Collider collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            StartCoroutine(CloseDialogue());
         }
     }
 }
