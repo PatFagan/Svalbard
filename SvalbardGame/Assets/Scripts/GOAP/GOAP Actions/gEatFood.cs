@@ -8,8 +8,16 @@ public class gEatFood : gGoapAction
     {
         name = "Eat Food";
         cost = 1;
-        //preconditions = new KeyValuePair<string, bool>("Has Axe", false);
-        //preconditions.Add(new KeyValuePair<string, bool>("Has Axe", false));
+        preconditions.Add("Is Hungry", true);
+    }
+
+    public override bool CheckPreconditions()
+    {
+        bool preconditionState;
+        if (preconditions.TryGetValue("Is Hungry", out preconditionState))
+            return true;
+        else
+            return false;
     }
 
     public override void RunAction()

@@ -22,19 +22,27 @@ public class gGoap : MonoBehaviour
         GoapActions[2] = eatFoodScript;
     }
 
+    void Start()
+    {
+        getListOfGoapActions();
+
+        // sort goap actions by cost, from least to greatest
+        //gnomeSort(GoapActions, goapActionsListSize);
+    }
+
     public void RunState(GameObject goapAgent)
     {
         print("goap state");
 
-        getListOfGoapActions();
-
-        goapActionsListSize = GoapActions.Count;
-        //print(goapActionsListSize);
-
-        // sort goap actions by cost, from least to greatest
-        //gnomeSort(GoapActions, goapActionsListSize);
-        // run the least cost action
-        GoapActions[2].RunAction();
+        // run first action with all preconditions met
+        for (int i = 0; i < GoapActions.Count; i++)
+        {
+            if (GoapActions[i].CheckPreconditions())
+            {
+                GoapActions[i].RunAction();
+                break;
+            }
+        }
 
         // run through goap actions
         // then find the first one that has all preconditions met, and pick that one

@@ -8,8 +8,16 @@ public class gGetAxe : gGoapAction
     {
         name = "Get Axe";
         cost = 2;
-        //preconditions = new KeyValuePair<string, bool>("Has Axe", false);
-        //preconditions.Add(new KeyValuePair<string, bool>("Has Axe", false));
+        preconditions.Add("Needs Axe", true);
+    }
+
+    public override bool CheckPreconditions()
+    {
+        bool preconditionState;
+        if (preconditions.TryGetValue("Needs Axe", out preconditionState))//.Value == false)
+            return true;
+        else
+            return false;
     }
 
     public override void RunAction()

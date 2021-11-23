@@ -129,7 +129,7 @@ public class DialogueScript : MonoBehaviour
                 vendorButton.SetActive(false);
             if (vendorMenu)
                 vendorMenu.SetActive(false);
-            timer = 200f;
+            timer = 300f;
             yield return new WaitUntil(() => nearNPC == true || timer == 0);
             dialogueBox.text = "";
         }
