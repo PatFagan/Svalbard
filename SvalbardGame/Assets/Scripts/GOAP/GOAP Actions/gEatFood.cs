@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class gEatFood : gGoapAction
 {
+    bool isHungry;
     public gEatFood()
     {
-        name = "Eat Food";
-        cost = 1;
-        preconditions.Add("Is Hungry", true);
+        name = "EatFood";
+        cost = 3;
+        isHungry = true;
+        preconditions.Add("IsHungry", isHungry);
     }
 
     public override bool CheckPreconditions()
     {
-        bool preconditionState;
-        if (preconditions.TryGetValue("Is Hungry", out preconditionState))
+        if (preconditions["IsHungry"] == true)
             return true;
         else
             return false;
@@ -23,5 +24,8 @@ public class gEatFood : gGoapAction
     public override void RunAction()
     {
         print("eating food, cost: " + cost);
+
+        isHungry = !isHungry;
+        preconditions["IsHungry"] = isHungry;
     }
 }

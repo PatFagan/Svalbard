@@ -34,6 +34,7 @@ public class gGoap : MonoBehaviour
     {
         print("goap state");
 
+        // run through goap actions
         // run first action with all preconditions met
         for (int i = 0; i < GoapActions.Count; i++)
         {
@@ -43,9 +44,6 @@ public class gGoap : MonoBehaviour
                 break;
             }
         }
-
-        // run through goap actions
-        // then find the first one that has all preconditions met, and pick that one
 
         // (this will automatically run planning since if an axe has already...
         // ...been picked up, then the preconditions will have been met...
@@ -71,6 +69,10 @@ public class gGoap : MonoBehaviour
                 i--;
             }
         }
+
+        print("SORTED: " + list[0] + " COST: " + list[0].cost); 
+        print("SORTED: " + list[1] + " COST: " + list[1].cost);
+        print("SORTED: " + list[2] + " COST: " + list[2].cost);
     }
 
     // swaps two values

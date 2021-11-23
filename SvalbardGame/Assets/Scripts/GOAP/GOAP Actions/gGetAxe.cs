@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class gGetAxe : gGoapAction
 {
+    bool hasAxe;
     public gGetAxe()
     {
-        name = "Get Axe";
+        name = "GetAxe";
         cost = 2;
-        preconditions.Add("Needs Axe", true);
+        hasAxe = false;
+        preconditions.Add("NeedsAxe", hasAxe);
     }
 
     public override bool CheckPreconditions()
     {
-        bool preconditionState;
-        if (preconditions.TryGetValue("Needs Axe", out preconditionState))//.Value == false)
+        if (preconditions["NeedsAxe"] == true)
             return true;
         else
             return false;
@@ -23,5 +24,8 @@ public class gGetAxe : gGoapAction
     public override void RunAction()
     {
         print("getting axe, cost: " + cost);
+
+        hasAxe = !hasAxe;
+        preconditions["NeedsAxe"] = hasAxe;
     }
 }
