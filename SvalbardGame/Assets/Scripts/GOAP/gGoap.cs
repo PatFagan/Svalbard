@@ -9,11 +9,17 @@ public class gGoap : MonoBehaviour
     public List<gGoapAction> GoapActions;
     int goapActionsListSize;
 
+    gChopWood chopWoodScript;
     gGetAxe getAxeScript;
+    gEatFood eatFoodScript;
     void getListOfGoapActions()
     {
+        chopWoodScript = GameObject.Find("GoapActionKeeper").GetComponent<gChopWood>();
+        GoapActions[0] = chopWoodScript;
         getAxeScript = GameObject.Find("GoapActionKeeper").GetComponent<gGetAxe>();
-        GoapActions[3] = getAxeScript;
+        GoapActions[1] = getAxeScript;
+        eatFoodScript = GameObject.Find("GoapActionKeeper").GetComponent<gEatFood>();
+        GoapActions[2] = eatFoodScript;
     }
 
     public void RunState(GameObject goapAgent)
@@ -21,12 +27,14 @@ public class gGoap : MonoBehaviour
         print("goap state");
 
         getListOfGoapActions();
-        GoapActions[3].RunAction();
 
         goapActionsListSize = GoapActions.Count;
+        //print(goapActionsListSize);
 
-        //gnomeSort(GoapActions, goapActionsListSize);
         // sort goap actions by cost, from least to greatest
+        //gnomeSort(GoapActions, goapActionsListSize);
+        // run the least cost action
+        GoapActions[2].RunAction();
 
         // run through goap actions
         // then find the first one that has all preconditions met, and pick that one
@@ -51,16 +59,16 @@ public class gGoap : MonoBehaviour
                 i++;
             else
             {
-                swapVar(list[i].cost, list[i - 1].cost);
+                swapVar(list[i], list[i - 1]);
                 i--;
             }
         }
     }
 
     // swaps two values
-    void swapVar<T>(T a, T b)
+    void swapVar(gGoapAction a, gGoapAction b)
     {
-        T temp;
+        gGoapAction temp;
         temp = a;
         a = b;
         b = temp;
