@@ -12,6 +12,8 @@ public class DialogueScript : MonoBehaviour
     public GameObject vendorButton;
     public GameObject vendorMenu;
 
+    public int index; // current dialogue being said
+
     bool nearNPC = false;
     public string[] sentences;
     public AudioSource[] voiceActing;
@@ -22,22 +24,18 @@ public class DialogueScript : MonoBehaviour
 
     float timer;
 
-    DialogueIndices dialogueIndicesScript;
     void Start()
     {
         questText = GameObject.Find("QuestText").GetComponent<TMP_Text>();
         dialogueBox = GameObject.Find("Dialogue").GetComponent<TMP_Text>();
         currentCharacter = GameObject.Find("CharacterImage").GetComponent<Image>();
-        //vendorMenu = GameObject.Find("VendorMenu");
-
-        dialogueIndicesScript = gameObject.GetComponent<DialogueIndices>();
     }
 
     public void StartDialogue()
     {
         nearNPC = true;
         dialogueBox.text = "";
-        currentCharacter.sprite = characterImages[dialogueIndicesScript.index];
+        currentCharacter.sprite = characterImages[index];
         currentCharacter.enabled = true;
         StartCoroutine(LoadDialogue());
         if (vendorButton)
@@ -76,8 +74,8 @@ public class DialogueScript : MonoBehaviour
 
     IEnumerator LoadDialogue()
     {
-        voiceActing[dialogueIndicesScript.index].Play();
-        foreach (char letter in sentences[dialogueIndicesScript.index].ToCharArray())
+        voiceActing[index].Play();
+        foreach (char letter in sentences[index].ToCharArray())
         {
             if (nearNPC == true)
             {
@@ -85,31 +83,28 @@ public class DialogueScript : MonoBehaviour
                 yield return new WaitForSeconds(.01f);
             }
         }
-        CheckQuestStatus(dialogueIndicesScript.index);
+        CheckQuestStatus(index);
     }
 
     public void NextLine()
     {
-        if (dialogueIndicesScript.index < sentences.Length - 1)
+        if (index < sentences.Length - 1)
         {
-            if (dialogueIndicesScript.index < dialogueIndicesScript.indexCap - 1)
-            {
-                dialogueIndicesScript.index++;
-                StartDialogue();
-            }
+            index++;
+            StartDialogue();
         }
     }
 
     void FinishLine()
     {
-        dialogueBox.text = sentences[dialogueIndicesScript.index];
+        dialogueBox.text = sentences[index];
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && nearNPC == true)
         {
-            if (dialogueBox.text == sentences[dialogueIndicesScript.index])
+            if (dialogueBox.text == sentences[index])
             {
                 NextLine();
             }
@@ -135,15 +130,7 @@ public class DialogueScript : MonoBehaviour
         }
     }
 
-    // dialogue start and end triggers
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.tag == "Player")
-        {
-            StartDialogue();
-        }
-    }
-
+    // dialogue end trigger
     void OnTriggerExit(Collider collider)
     {
         if (collider.gameObject.tag == "Player")

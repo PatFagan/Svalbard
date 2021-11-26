@@ -7,7 +7,6 @@ public class gGoap : MonoBehaviour
     gFSM fsmScript;
 
     public List<gGoapAction> GoapActions;
-    int goapActionsListSize;
 
     gChopWood chopWoodScript;
     gGetAxe getAxeScript;
@@ -27,7 +26,7 @@ public class gGoap : MonoBehaviour
         getListOfGoapActions();
 
         // sort goap actions by cost, from least to greatest
-        gnomeSort(GoapActions, goapActionsListSize);
+        gnomeSort(GoapActions);
     }
 
     public void RunState(GameObject goapAgent)
@@ -53,11 +52,11 @@ public class gGoap : MonoBehaviour
         fsmScript.currentState = "MoveToPos"; // set to next state after finished
     }
 
-    void gnomeSort(List<gGoapAction> list, int size)
+    void gnomeSort(List<gGoapAction> list)
     {
         int i = 0;
 
-        while (i < size)
+        while (i < list.Count)
         {
             if (i == 0)
                 i++;

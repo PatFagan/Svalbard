@@ -4,21 +4,17 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public string npcName;
-    public int indexIncrease;
-
-    DialogueIndices dialogueIndicesScript;
+    public Dictionary<string, bool> dialoguePreconditions;
     void Start()
     {
-        dialogueIndicesScript = GameObject.Find(npcName).GetComponent<DialogueIndices>();
+        dialoguePreconditions = GameObject.Find("Player").GetComponent<DialoguePreconditions>().preconditions;
     }
 
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
         {
-            dialogueIndicesScript.indexCap += indexIncrease;
-            dialogueIndicesScript.index++;
+            preconditions["HasLightbulb"] = true;
             Destroy(gameObject);
         }
     }
