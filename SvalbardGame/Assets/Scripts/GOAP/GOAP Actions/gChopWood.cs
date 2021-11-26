@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class gChopWood : gGoapAction
 {
-    bool hasAxe;
+    public string aiName;
+
+    // get agent status
+    gGoapAgent goapAgentScript;
+    void Start()
+    {
+        goapAgentScript = GameObject.Find(aiName).GetComponent<gGoapAgent>();
+    }
+
     public gChopWood()
     {
         name = "ChopWood";
         cost = 1;
-        hasAxe = false;
-        preconditions.Add("HasAxe", hasAxe);
+        preconditions.Add("HasAxe", false);
     }
 
     public override bool CheckPreconditions()
@@ -25,7 +32,6 @@ public class gChopWood : gGoapAction
     {
         print("chopping wood, cost: " + cost);
 
-        hasAxe = !hasAxe;
-        preconditions["HasAxe"] = hasAxe;
+        preconditions["HasAxe"] = goapAgentScript.hasAxe;
     }
 }
