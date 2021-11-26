@@ -14,12 +14,15 @@ public class gFSM : MonoBehaviour
     public string currentState; // current state key
     bool runningCheck;
 
+    GameObject goapActionKeeper;
+
     void Start()
     {
+        goapActionKeeper = GameObject.Find("GoapActionKeeper");
         // set the FSM states
-        goapScript = currentGoapAgent.GetComponent<gGoap>();
-        moveToPosScript = currentGoapAgent.GetComponent<gMoveToPos>();
-        animateScript = currentGoapAgent.GetComponent<gAnimate>();
+        goapScript = goapActionKeeper.GetComponent<gGoap>();
+        moveToPosScript = goapActionKeeper.GetComponent<gMoveToPos>();
+        animateScript = goapActionKeeper.GetComponent<gAnimate>();
 
         currentState = "Goap"; // set starting state
         runningCheck = false;

@@ -27,7 +27,7 @@ public class gGoap : MonoBehaviour
         getListOfGoapActions();
 
         // sort goap actions by cost, from least to greatest
-        //gnomeSort(GoapActions, goapActionsListSize);
+        gnomeSort(GoapActions, goapActionsListSize);
     }
 
     public void RunState(GameObject goapAgent)
@@ -36,7 +36,7 @@ public class gGoap : MonoBehaviour
 
         // run through goap actions
         // run first action with all preconditions met
-        for (int i = 0; i < GoapActions.Count; i++)
+        for (int i = GoapActions.Count - 1; i >= 0; i--)
         {
             if (GoapActions[i].CheckPreconditions())
             {
@@ -61,7 +61,7 @@ public class gGoap : MonoBehaviour
         {
             if (i == 0)
                 i++;
-            if (list[i - 1].cost <= list[i].cost)
+            if (list[i - 1].cost >= list[i].cost)
                 i++;
             else
             {

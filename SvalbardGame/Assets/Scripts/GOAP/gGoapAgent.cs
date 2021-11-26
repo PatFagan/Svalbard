@@ -29,15 +29,18 @@ public class gGoapAgent : MonoBehaviour
     {
         if (collider.gameObject.tag == "Food")
         {
-            hungerTimer = 500f;
+            print("eating...");
+            hungerTimer = 5000f;
             isHungry = false;
         }
-        else if (collider.gameObject.tag == "Axe")
+        if (collider.gameObject.tag == "Axe")
         {
+            print("picking up axe...");
             hasAxe = true;
         }
-        else if (collider.gameObject.tag == "Wood")
+        if (collider.gameObject.tag == "Wood")
         {
+            print("chopping wood...");
             hasAxe = false;
         }
     }

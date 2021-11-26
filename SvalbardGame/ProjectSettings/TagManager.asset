@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - VendorMenu
+  - Axe
+  - Wood
+  - Food
   layers:
   - Default
   - TransparentFX
