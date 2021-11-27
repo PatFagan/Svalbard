@@ -24,8 +24,11 @@ public class DialogueScript : MonoBehaviour
 
     float timer;
 
+    DialogueGoap dialogueGoapScript;
     void Start()
     {
+        dialogueGoapScript = gameObject.GetComponent<DialogueGoap>();
+
         questText = GameObject.Find("QuestText").GetComponent<TMP_Text>();
         dialogueBox = GameObject.Find("Dialogue").GetComponent<TMP_Text>();
         currentCharacter = GameObject.Find("CharacterImage").GetComponent<Image>();
@@ -40,6 +43,7 @@ public class DialogueScript : MonoBehaviour
         farewellAudio = conversation.farewellAudio;
         questUpdates = conversation.questUpdates;
 
+        index = 0;
         nearNPC = true;
         dialogueBox.text = "";
         currentCharacter.sprite = characterImages[index];
@@ -80,6 +84,10 @@ public class DialogueScript : MonoBehaviour
         {
             index++;
             ContinueDialogue();
+        }
+        else if (index == sentences.Length - 1)
+        {
+            dialogueGoapScript.ChooseDialogue();
         }
     }
 

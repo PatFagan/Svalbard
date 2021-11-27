@@ -17,7 +17,7 @@ public class DialogueGoap : MonoBehaviour
         //gnomeSort(conversations);
     }
 
-    void ChooseDialogue()
+    public void ChooseDialogue()
     {
         // run through goap actions
         // run first action with all preconditions met
