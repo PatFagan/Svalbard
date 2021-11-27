@@ -6,10 +6,15 @@ public class CartographerIntroduction : Conversation
 {
     public override bool CheckPreconditions()
     {
-        UpdatePreconditions();
-        if (preconditions["NeedsAxe"] == true)
+        UpdateToPlayerPreconditions();
+        if (preconditions["HasMetCartographer"] == false)
             return true;
         else
             return false;
+    }
+
+    public override void UpdatePreconditions()
+    {
+        preconditions["HasMetCartographer"] = true;
     }
 }

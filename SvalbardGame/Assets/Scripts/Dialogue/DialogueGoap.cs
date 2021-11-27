@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class DialogueGoap : MonoBehaviour
 {
-    public List<Conversation> conversations;
-    string characterName = gameObject.name;
+    public List<Conversation> conversations; // list of conversations
 
-    DialogueScript dialogueScript;
-    DialoguePreconditions dialoguePreconditionsScript;
+    DialogueScript dialogueScript; // script that runs the given dialogue
+    DialoguePreconditions dialoguePreconditionsScript; // script that checks dialogue preconditions
     void Start()
     {
         dialogueScript = gameObject.GetComponent<DialogueScript>();
-        dialoguePreconditionsScript = GameObject.Find("DialoguePreconditions").GetComponent<DialoguePreconditions>();
-        print(characterName);
+        dialoguePreconditionsScript = GameObject.Find("Player").GetComponent<DialoguePreconditions>();
+
+        conversations = gameObject.GetComponent<CharacterConversations>().conversations;
 
         // sort list of conversations by cost, from least to greatest
-        gnomeSort(conversations);
+        //gnomeSort(conversations);
     }
 
     void ChooseDialogue()
@@ -28,12 +28,13 @@ public class DialogueGoap : MonoBehaviour
             if (conversations[i].CheckPreconditions())
             {
                 dialogueScript.StartDialogue(conversations[i]); // put sentences, images, voice acting (and maybe color) parameters here
+                conversations[i].UpdatePreconditions();
                 break;
             }
         }
     }
 
-    void gnomeSort(List<gGoapAction> list)
+    void gnomeSort(List<Conversation> list)
     {
         int i = 0;
 
@@ -56,9 +57,9 @@ public class DialogueGoap : MonoBehaviour
     }
 
     // swaps two values
-    void swapVar(gGoapAction a, gGoapAction b)
+    void swapVar(Conversation a, Conversation b)
     {
-        gGoapAction temp;
+        Conversation temp;
         temp = a;
         a = b;
         b = temp;
@@ -69,6 +70,7 @@ public class DialogueGoap : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
+            print("start talking");
             ChooseDialogue();
         }
     }

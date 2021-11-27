@@ -10,5 +10,7 @@ public class DialoguePreconditions : MonoBehaviour
     {
         preconditions.Add("HasLightBulb", false);
         preconditions.Add("HasMetCartographer", false);
+
+        preconditions.Add("AtCartographer", false);
     }
 }

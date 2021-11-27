@@ -15,12 +15,12 @@ public abstract class Conversation : MonoBehaviour
     public AudioSource farewellAudio;
 
     public abstract bool CheckPreconditions();
-    public abstract void RunAction();
+    public abstract void UpdatePreconditions();
 
     DialoguePreconditions dialoguePreconditionsScript;
-    public void UpdatePreconditions()
+    public void UpdateToPlayerPreconditions()
     {
         dialoguePreconditionsScript = GameObject.Find("Player").GetComponent<DialoguePreconditions>();
-        preconditions = DialoguePreconditions.preconditions;
+        preconditions = dialoguePreconditionsScript.preconditions;
     }
 }

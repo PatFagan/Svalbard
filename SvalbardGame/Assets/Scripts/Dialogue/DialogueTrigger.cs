@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    public string preconditionName;
+    public bool destroy;
+
     public Dictionary<string, bool> dialoguePreconditions;
     void Start()
     {
@@ -14,8 +17,9 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            preconditions["HasLightbulb"] = true;
-            Destroy(gameObject);
+            dialoguePreconditions[preconditionName] = true;
+            if(destroy)
+                Destroy(gameObject);
         }
     }
 }

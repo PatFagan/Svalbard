@@ -528,7 +528,6 @@ GameObject:
   m_Component:
   - component: {fileID: 272328425}
   - component: {fileID: 272328424}
-  - component: {fileID: 272328422}
   - component: {fileID: 272328421}
   - component: {fileID: 272328420}
   m_Layer: 0
@@ -565,51 +564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vendorButton: {fileID: 0}
   vendorMenu: {fileID: 0}
-  sentences:
-  - DONT SPEAK TO ME UNLESS YOU HAVE THE SEED
-  - comment ca va?
-  - ma carte a disparu! my map has gone missing, i'm afraid
-  - merde! those skellies probably took it
-  - ~~WE DID NO SUCH THING, MAP BOY~~
-  - (ignore them) if you could bring it back to me, i'd be sure to make it worth
-    your while
-  - if not, then me parle pas, my friend!
-  - oh, ma carte! merci beaucoup!
-  voiceActing:
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 1857262799}
-  - {fileID: 169579717}
-  - {fileID: 1857262799}
-  - {fileID: 1857262799}
-  - {fileID: 1857262799}
-  characterImages:
-  - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
-  - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
-  - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
-  - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
-  - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
-  - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
-  - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
-  - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
-  farewellDialogue: FETCH WITH HASTE, OLD MAN
-  farewellAudio: {fileID: 169579717}
-  questUpdates: 07000000
---- !u!114 &272328422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 272328419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ed920a2e8c7dfd4198d3f1d9fb9c737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   index: 0
-  indexCap: 1
 --- !u!212 &272328424
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -699,7 +654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &334408717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3506,7 +3461,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1302826672}
   - component: {fileID: 1302826671}
-  - component: {fileID: 1302826675}
   - component: {fileID: 1302826673}
   - component: {fileID: 1302826670}
   m_Layer: 0
@@ -3609,47 +3563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vendorButton: {fileID: 0}
   vendorMenu: {fileID: 0}
-  sentences:
-  - 0 greetings MORTAL
-  - 1 hello how are you MORTAL
-  - 2 could you find my lightbulb
-  - 3 it was a cherished gift from a friend of mine
-  - 4 OURSSSS
-  - 5i see you found my lightbulb
-  - 6 aiysdgiasd9u
-  voiceActing:
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 1857262799}
-  - {fileID: 169579717}
-  - {fileID: 1857262799}
-  - {fileID: 1857262799}
-  characterImages:
-  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
-  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
-  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
-  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
-  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
-  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
-  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
-  farewellDialogue: '>>>Bye then, MORTAL<<<'
-  farewellAudio: {fileID: 169579717}
-  questUpdates: 05000000
---- !u!114 &1302826675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302826669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ed920a2e8c7dfd4198d3f1d9fb9c737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   index: 0
-  indexCap: 5
 --- !u!1 &1330806965
 GameObject:
   m_ObjectHideFlags: 0
@@ -3660,7 +3574,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1330806971}
   - component: {fileID: 1330806970}
-  - component: {fileID: 1330806968}
   - component: {fileID: 1330806967}
   - component: {fileID: 1330806966}
   m_Layer: 0
@@ -3697,50 +3610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vendorButton: {fileID: 0}
   vendorMenu: {fileID: 0}
-  sentences:
-  - oh, hello, gramps!
-  - what're you doin this side of the village?
-  - nyeh ive come lookin' just for you, igor
-  - you jest but i seek you out every morning, you ol' scamp, you!
-  - i seek only to meet my ends
-  - oh how i do appreciate your nihlistic wisdom!
-  - please leave me alone
-  - then it shall be so, say no more chief!
-  voiceActing:
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 1857262799}
-  - {fileID: 169579717}
-  - {fileID: 1857262799}
-  - {fileID: 1857262799}
-  - {fileID: 1857262799}
-  characterImages:
-  - {fileID: 21300000, guid: 682569af2a6e32c458c62c8e12cd528c, type: 3}
-  - {fileID: 21300000, guid: 682569af2a6e32c458c62c8e12cd528c, type: 3}
-  - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
-  - {fileID: 21300000, guid: 682569af2a6e32c458c62c8e12cd528c, type: 3}
-  - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
-  - {fileID: 21300000, guid: 682569af2a6e32c458c62c8e12cd528c, type: 3}
-  - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
-  - {fileID: 21300000, guid: 682569af2a6e32c458c62c8e12cd528c, type: 3}
-  farewellDialogue: until next time!
-  farewellAudio: {fileID: 169579717}
-  questUpdates: 
---- !u!114 &1330806968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330806965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ed920a2e8c7dfd4198d3f1d9fb9c737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   index: 0
-  indexCap: 8
 --- !u!212 &1330806970
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5668,7 +5538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2072063280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6086,7 +5956,6 @@ GameObject:
   - component: {fileID: 8578634114400102282}
   - component: {fileID: 6938612724495029916}
   - component: {fileID: 663971093408946490}
-  - component: {fileID: 3031500212796428817}
   m_Layer: 0
   m_Name: DitheringZone
   m_TagString: Untagged
@@ -6094,19 +5963,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &3031500212796428817
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3031500212796428816}
-  m_Material: {fileID: 13400000, guid: d642b394c1e46d44eb5a9ef0aa1a2cd0, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 10, z: 5.33797}
-  m_Center: {x: 0, y: 0, z: -11.585266}
 --- !u!4 &3124599601787677130
 Transform:
   m_ObjectHideFlags: 0
@@ -6123,51 +5979,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3124599601787677131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3124599601787677143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb83396a70c15734593b466e33f967d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vendorButton: {fileID: 1741442630}
-  vendorMenu: {fileID: 1939019531}
-  sentences:
-  - bonsoir mon amis!
-  - comment ca va?
-  - ma carte a disparu! my map has gone missing, i'm afraid
-  - merde! those skellies probably took it
-  - ~~WE DID NO SUCH THING, MAP BOY~~
-  - (ignore them) if you could bring it back to me, i'd be sure to make it worth
-    your while
-  - if not, then me parle pas, my friend!
-  - oh, ma carte! merci beaucoup!
-  voiceActing:
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 1857262799}
-  - {fileID: 169579717}
-  - {fileID: 1857262799}
-  - {fileID: 1857262799}
-  - {fileID: 1857262799}
-  characterImages:
-  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
-  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
-  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
-  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
-  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
-  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
-  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
-  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
-  farewellDialogue: a bientot!
-  farewellAudio: {fileID: 169579717}
-  questUpdates: 07000000
 --- !u!212 &3124599601787677141
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6229,9 +6040,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3124599601787677130}
   - component: {fileID: 3124599601787677141}
-  - component: {fileID: 3124599601787677144}
-  - component: {fileID: 3124599601787677131}
   - component: {fileID: 3124599601787677145}
+  - component: {fileID: 3124599601787677144}
+  - component: {fileID: 3124599601787677148}
+  - component: {fileID: 3124599601787677147}
+  - component: {fileID: 3124599601787677146}
   m_Layer: 0
   m_Name: Cartographer
   m_TagString: Untagged
@@ -6239,20 +6052,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &3124599601787677144
-MonoBehaviour:
+--- !u!65 &3124599601787677144
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3124599601787677143}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ed920a2e8c7dfd4198d3f1d9fb9c737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 0
-  indexCap: 7
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5, z: 3.99}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &3124599601787677145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6266,6 +6078,60 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 22.23, y: 15.25, z: 21.01}
   m_Center: {x: 0, y: 0, z: -2.8636038}
+--- !u!114 &3124599601787677146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124599601787677143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd6ad05b7ed642f4eb5f151699e36e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 1
+  sentences:
+  - home boy
+  - yuh bruh
+  voiceActing:
+  - {fileID: 169579717}
+  - {fileID: 1857262799}
+  characterImages:
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
+  farewellDialogue: ayyo
+  farewellAudio: {fileID: 169579717}
+--- !u!114 &3124599601787677147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124599601787677143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dfbfdd66a7190943989251a5eba5d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversations:
+  - {fileID: 3124599601787677146}
+  - {fileID: 3124599601787677146}
+--- !u!114 &3124599601787677148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124599601787677143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb83396a70c15734593b466e33f967d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vendorButton: {fileID: 1741442630}
+  vendorMenu: {fileID: 1939019531}
+  index: 0
 --- !u!114 &3798776014671241682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6278,8 +6144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6541a1d5487c4843accf59bcb9b3237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcName: Skellies
-  indexIncrease: 5
+  preconditionName: 
+  destroy: 0
 --- !u!65 &5410557402448540134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6424,7 +6290,7 @@ PrefabInstance:
     - target: {fileID: 8336542142948155447, guid: b957d41e3a0965a45b3038465df66aaa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -99.5
+      value: 14.1
       objectReference: {fileID: 0}
     - target: {fileID: 8336542142948155447, guid: b957d41e3a0965a45b3038465df66aaa,
         type: 3}
@@ -6434,7 +6300,7 @@ PrefabInstance:
     - target: {fileID: 8336542142948155447, guid: b957d41e3a0965a45b3038465df66aaa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -40.8
+      value: -27.4
       objectReference: {fileID: 0}
     - target: {fileID: 8336542142948155447, guid: b957d41e3a0965a45b3038465df66aaa,
         type: 3}

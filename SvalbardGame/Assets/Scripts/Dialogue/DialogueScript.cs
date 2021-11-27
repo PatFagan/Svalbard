@@ -15,12 +15,12 @@ public class DialogueScript : MonoBehaviour
     public int index; // current dialogue being said
 
     bool nearNPC = false;
-    public string[] sentences;
-    public AudioSource[] voiceActing;
-    public Sprite[] characterImages;
-    public string farewellDialogue;
-    public AudioSource farewellAudio;
-    public int[] questUpdates;
+    string[] sentences;
+    AudioSource[] voiceActing;
+    Sprite[] characterImages;
+    string farewellDialogue;
+    AudioSource farewellAudio;
+    int[] questUpdates;
 
     float timer;
 
@@ -31,8 +31,14 @@ public class DialogueScript : MonoBehaviour
         currentCharacter = GameObject.Find("CharacterImage").GetComponent<Image>();
     }
 
-    public void StartDialogue()
+    public void StartDialogue(Conversation conversation)
     {
+        sentences = conversation.sentences;
+        characterImages = conversation.characterImages;
+        voiceActing = conversation.voiceActing;
+        farewellDialogue = conversation.farewellDialogue;
+        farewellAudio = conversation.farewellAudio;
+
         nearNPC = true;
         dialogueBox.text = "";
         currentCharacter.sprite = characterImages[index];
@@ -42,34 +48,15 @@ public class DialogueScript : MonoBehaviour
             vendorButton.SetActive(true);
     }
 
-    // check to see if a quest has been updated
-    public void CheckQuestStatus(int currentIndex)
+    void ContinueDialogue()
     {
-        for (int i = 0; i < questUpdates.Length; i++)
-        {
-            if (currentIndex == questUpdates[i])
-            {
-                StartCoroutine(ShowQuestStatus(1));
-            }
-        }
-    }
-
-    // if one has, display the update
-    IEnumerator ShowQuestStatus(int status)
-    {
-        switch(status)
-        {
-            case 1:
-                questText.text = "FAVOR EARNED";
-                yield return new WaitForSeconds(3f);
-                questText.text = "";
-                break;
-            default:
-                questText.text = "QUEST UPDATED";
-                yield return new WaitForSeconds(3f);
-                questText.text = "";
-                break;
-        }
+        nearNPC = true;
+        dialogueBox.text = "";
+        currentCharacter.sprite = characterImages[index];
+        currentCharacter.enabled = true;
+        StartCoroutine(LoadDialogue());
+        if (vendorButton)
+            vendorButton.SetActive(true);
     }
 
     IEnumerator LoadDialogue()
@@ -91,7 +78,7 @@ public class DialogueScript : MonoBehaviour
         if (index < sentences.Length - 1)
         {
             index++;
-            StartDialogue();
+            ContinueDialogue();
         }
     }
 
@@ -136,6 +123,36 @@ public class DialogueScript : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             StartCoroutine(CloseDialogue());
+        }
+    }
+
+    // check to see if a quest has been updated
+    public void CheckQuestStatus(int currentIndex)
+    {
+        for (int i = 0; i < questUpdates.Length; i++)
+        {
+            if (currentIndex == questUpdates[i])
+            {
+                StartCoroutine(ShowQuestStatus(1));
+            }
+        }
+    }
+
+    // if one has, display the update
+    IEnumerator ShowQuestStatus(int status)
+    {
+        switch (status)
+        {
+            case 1:
+                questText.text = "FAVOR EARNED";
+                yield return new WaitForSeconds(3f);
+                questText.text = "";
+                break;
+            default:
+                questText.text = "QUEST UPDATED";
+                yield return new WaitForSeconds(3f);
+                questText.text = "";
+                break;
         }
     }
 }
