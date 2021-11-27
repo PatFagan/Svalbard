@@ -13,10 +13,8 @@ public class DialogueGoap : MonoBehaviour
         dialogueScript = gameObject.GetComponent<DialogueScript>();
         dialoguePreconditionsScript = GameObject.Find("Player").GetComponent<DialoguePreconditions>();
 
-        conversations = gameObject.GetComponent<CharacterConversations>().conversations;
-
         // sort list of conversations by cost, from least to greatest
-        //gnomeSort(conversations);
+        gnomeSort(conversations);
     }
 
     void ChooseDialogue()
@@ -27,7 +25,7 @@ public class DialogueGoap : MonoBehaviour
         {
             if (conversations[i].CheckPreconditions())
             {
-                dialogueScript.StartDialogue(conversations[i]); // put sentences, images, voice acting (and maybe color) parameters here
+                dialogueScript.StartDialogue(conversations[i]);
                 conversations[i].UpdatePreconditions();
                 break;
             }
@@ -70,7 +68,6 @@ public class DialogueGoap : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            print("start talking");
             ChooseDialogue();
         }
     }

@@ -26,7 +26,7 @@ public class DialogueScript : MonoBehaviour
 
     void Start()
     {
-        questText = GameObject.Find("QuestText").GetComponent<TMP_Text>();
+        //questText = GameObject.Find("QuestText").GetComponent<TMP_Text>();
         dialogueBox = GameObject.Find("Dialogue").GetComponent<TMP_Text>();
         currentCharacter = GameObject.Find("CharacterImage").GetComponent<Image>();
     }
@@ -38,6 +38,7 @@ public class DialogueScript : MonoBehaviour
         voiceActing = conversation.voiceActing;
         farewellDialogue = conversation.farewellDialogue;
         farewellAudio = conversation.farewellAudio;
+        questUpdates = conversation.questUpdates;
 
         nearNPC = true;
         dialogueBox.text = "";

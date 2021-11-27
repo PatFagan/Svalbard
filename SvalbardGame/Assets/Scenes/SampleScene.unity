@@ -6045,6 +6045,7 @@ GameObject:
   - component: {fileID: 3124599601787677148}
   - component: {fileID: 3124599601787677147}
   - component: {fileID: 3124599601787677146}
+  - component: {fileID: 3124599601787677149}
   m_Layer: 0
   m_Name: Cartographer
   m_TagString: Untagged
@@ -6090,18 +6091,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6ad05b7ed642f4eb5f151699e36e83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 1
+  cost: 2
   sentences:
-  - home boy
-  - yuh bruh
+  - bonjour paulo!
+  - hey pierre, you wouldnt happen to have run into any significant-looking acorns
+    on your map-making jaunts, have you?
+  - je regrette, cant say that i have, paulo
+  - hm, thanks anyways pierre
   voiceActing:
   - {fileID: 169579717}
   - {fileID: 1857262799}
+  - {fileID: 1857262799}
+  - {fileID: 1857262799}
   characterImages:
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
-  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
-  farewellDialogue: ayyo
+  - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
+  farewellDialogue: one more thing, actually, paulo!
   farewellAudio: {fileID: 169579717}
+  questUpdates: 02000000
 --- !u!114 &3124599601787677147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6116,7 +6125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversations:
   - {fileID: 3124599601787677146}
-  - {fileID: 3124599601787677146}
+  - {fileID: 3124599601787677149}
 --- !u!114 &3124599601787677148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6132,6 +6141,59 @@ MonoBehaviour:
   vendorButton: {fileID: 1741442630}
   vendorMenu: {fileID: 1939019531}
   index: 0
+--- !u!114 &3124599601787677149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124599601787677143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18e122142b784cd49aa4ea76820ea900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 0
+  sentences:
+  - bon soir mon amis
+  - unfortunalement ma carte a disparu, i've lost my trusty map
+  - merde! (i bet those skellie scoundrels nabbed it)
+  - ~~WE HAVE DONE NO SUCH THING MAP MAN~~
+  - ~~YOUR MAP IS OF NO USE TO OUR GREATER PURPOSE~~
+  - uhuh, but my ex-wife sure was
+  - ...
+  - anyways, paulo, if you could find it for me i'd be sure to make it worth your
+    while
+  - if not, then kindly me parle pas, mon amis
+  - i'll let you know if i run into it
+  - merci, paul
+  voiceActing:
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  characterImages:
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
+  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  farewellDialogue: a bientot, mon amis!
+  farewellAudio: {fileID: 169579717}
+  questUpdates: 
 --- !u!114 &3798776014671241682
 MonoBehaviour:
   m_ObjectHideFlags: 0

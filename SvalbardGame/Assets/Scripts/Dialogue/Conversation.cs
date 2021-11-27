@@ -13,6 +13,7 @@ public abstract class Conversation : MonoBehaviour
     public Sprite[] characterImages;
     public string farewellDialogue;
     public AudioSource farewellAudio;
+    public int[] questUpdates;
 
     public abstract bool CheckPreconditions();
     public abstract void UpdatePreconditions();
