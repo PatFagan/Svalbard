@@ -26,7 +26,7 @@ public class DialogueScript : MonoBehaviour
 
     void Start()
     {
-        //questText = GameObject.Find("QuestText").GetComponent<TMP_Text>();
+        questText = GameObject.Find("QuestText").GetComponent<TMP_Text>();
         dialogueBox = GameObject.Find("Dialogue").GetComponent<TMP_Text>();
         currentCharacter = GameObject.Find("CharacterImage").GetComponent<Image>();
     }
@@ -115,6 +115,7 @@ public class DialogueScript : MonoBehaviour
             timer = 300f;
             yield return new WaitUntil(() => nearNPC == true || timer == 0);
             dialogueBox.text = "";
+            index = 0;
         }
     }
 

@@ -14,19 +14,20 @@ public class DialogueGoap : MonoBehaviour
         dialoguePreconditionsScript = GameObject.Find("Player").GetComponent<DialoguePreconditions>();
 
         // sort list of conversations by cost, from least to greatest
-        gnomeSort(conversations);
+        //gnomeSort(conversations);
     }
 
     void ChooseDialogue()
     {
         // run through goap actions
         // run first action with all preconditions met
-        for (int i = conversations.Count - 1; i >= 0; i--)
+        for (int i = 0; i < conversations.Count; i ++)
         {
             if (conversations[i].CheckPreconditions())
             {
                 dialogueScript.StartDialogue(conversations[i]);
                 conversations[i].UpdatePreconditions();
+                conversations.RemoveAt(i);
                 break;
             }
         }
