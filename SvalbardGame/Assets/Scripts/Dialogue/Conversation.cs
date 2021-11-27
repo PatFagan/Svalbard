@@ -6,6 +6,7 @@ using UnityEngine;
 public abstract class Conversation : MonoBehaviour
 {
     public int cost;
+    public string conditionKey;
     public Dictionary<string, bool> preconditions = new Dictionary<string, bool>();
 
     public string[] sentences;

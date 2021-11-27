@@ -11,6 +11,11 @@ public class DialoguePreconditions : MonoBehaviour
         preconditions.Add("HasLightBulb", false);
         preconditions.Add("HasMetCartographer", false);
 
-        preconditions.Add("AtCartographer", false);
+        preconditions.Add("HasMetYigs", false);
+        preconditions.Add("HasTheSeed", false);
+
+        // IGOR
+        preconditions.Add("HasMetIgor", false);
+        preconditions.Add("IGOR-001", false);
     }
 }
