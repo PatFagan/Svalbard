@@ -293,7 +293,37 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &102431108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 102431109}
+  m_Layer: 0
+  m_Name: =========================
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &102431109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102431108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.5, y: 4.87, z: 11.036396}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &169579715
 GameObject:
@@ -516,7 +546,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &264149585
 GameObject:
@@ -626,7 +656,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &334408719
 MonoBehaviour:
@@ -2176,7 +2206,7 @@ Transform:
   - {fileID: 1065736093}
   - {fileID: 890470444}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1019130201
 GameObject:
@@ -3269,7 +3299,7 @@ Transform:
   m_Children:
   - {fileID: 6652274659479486704}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1302826673
 MonoBehaviour:
@@ -4139,7 +4169,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1531180583
 GameObject:
@@ -4882,7 +4912,7 @@ Transform:
   - {fileID: 1141399324}
   - {fileID: 1684180653}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1781365783
 GameObject:
@@ -5288,7 +5318,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1990909771
+--- !u!1 &1953541133
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5296,24 +5326,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1990909774}
-  - component: {fileID: 1990909773}
-  - component: {fileID: 1990909772}
-  - component: {fileID: 3798776014671241682}
+  - component: {fileID: 1953541137}
+  - component: {fileID: 1953541136}
+  - component: {fileID: 1953541135}
+  - component: {fileID: 1953541134}
   m_Layer: 0
-  m_Name: LightBulb
+  m_Name: Pierre'sMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!212 &1990909772
+--- !u!114 &1953541134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953541133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6541a1d5487c4843accf59bcb9b3237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preconditionName: DoesNotHaveTheMap
+  destroy: 1
+--- !u!212 &1953541135
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990909771}
+  m_GameObject: {fileID: 1953541133}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -5358,32 +5402,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &1990909773
+--- !u!65 &1953541136
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990909771}
+  m_GameObject: {fileID: 1953541133}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &1990909774
+--- !u!4 &1953541137
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990909771}
+  m_GameObject: {fileID: 1953541133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -45.36, y: 1.3, z: -1.77}
+  m_LocalPosition: {x: -36.4, y: 1.3, z: -1.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2058062939
 GameObject:
@@ -5507,7 +5551,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2072063282
 BoxCollider:
@@ -5617,6 +5661,7 @@ GameObject:
   - component: {fileID: 2129615695}
   - component: {fileID: 2129615694}
   - component: {fileID: 2129615693}
+  - component: {fileID: 2129615699}
   - component: {fileID: 2129615692}
   - component: {fileID: 2129615691}
   m_Layer: 0
@@ -5635,22 +5680,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 2129615690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac501a1d2bf1dcf4eae703f4cfd49b5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ea255758e5313e41832501438ee880a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
-  conditionKey: HasTheSeed
+  conditionKey: 
   sentences:
-  - YOURE STILL SEEDLESS MORTAL
-  - RETURN WITH THE SEED OR NOT AT ALL, YOURE RUINING MY VIEW
+  - I SOMETIMES GAZE AT THE SKY SO LONG
+  - IT DISSOLVES INTO HAZE
+  - you okay, yigs?
+  - I WANT DEATH, MORTAL
   voiceActing:
+  - {fileID: 1857262799}
+  - {fileID: 1857262799}
   - {fileID: 1857262799}
   - {fileID: 1857262799}
   characterImages:
   - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
   - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
-  farewellDialogue: FETCH WITH HASTE, OLD MAN
-  farewellAudio: {fileID: 169579717}
+  - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
+  - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
+  farewellDialogue: PLEASE FETCH WITH HASTE
+  farewellAudio: {fileID: 1857262799}
   questUpdates: 
 --- !u!114 &2129615692
 MonoBehaviour:
@@ -5661,43 +5712,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2129615690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac501a1d2bf1dcf4eae703f4cfd49b5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 10dcbe615ac1b74418b18860c7f3ddee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
-  conditionKey: HasMetYigs
+  conditionKey: HasTheSeed
   sentences:
-  - aghhhhhhhh
-  - oh ho hooooo fuck
-  - ahahhah christ
-  - oh hello, you look like a soul with enough vacancy to spare
-  - i'd be offended if i cared what a tree thought
-  - still his wits about 'im too?
-  - im right in front of you, tree. call me paul
-  - call ME yigs
-  - what do you need a souless husk for yigs?
+  - RETURN WITH THE SEED OR NOT AT ALL, MORTAL
   voiceActing:
-  - {fileID: 1857262799}
-  - {fileID: 1857262799}
-  - {fileID: 1857262799}
-  - {fileID: 1857262799}
-  - {fileID: 1857262799}
-  - {fileID: 1857262799}
-  - {fileID: 1857262799}
-  - {fileID: 1857262799}
   - {fileID: 1857262799}
   characterImages:
   - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
-  - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
-  - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
-  - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
-  - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
-  - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
-  - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
-  - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
-  - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
-  farewellDialogue: farewell
-  farewellAudio: {fileID: 169579717}
+  farewellDialogue: FETCH WITH HASTE, OLD MAN
+  farewellAudio: {fileID: 1857262799}
   questUpdates: 
 --- !u!114 &2129615693
 MonoBehaviour:
@@ -5712,6 +5739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversations:
+  - {fileID: 2129615699}
   - {fileID: 2129615692}
   - {fileID: 2129615691}
 --- !u!114 &2129615694
@@ -5822,6 +5850,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2129615699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129615690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10dcbe615ac1b74418b18860c7f3ddee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 0
+  conditionKey: HasMetYigs
+  sentences:
+  - GREETINGS MORTAL
+  voiceActing:
+  - {fileID: 1857262799}
+  characterImages:
+  - {fileID: 21300000, guid: f4e71ba1b9689d745be9cb06f21ebae0, type: 3}
+  farewellDialogue: FAREWELL
+  farewellAudio: {fileID: 1857262799}
+  questUpdates: 
 --- !u!1 &94227776932328810
 GameObject:
   m_ObjectHideFlags: 0
@@ -6021,7 +6072,7 @@ PrefabInstance:
     - target: {fileID: 2456420222909667604, guid: 435af5247ed8dba4ea2ff2f50b7fe2c9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2456420222909667604, guid: 435af5247ed8dba4ea2ff2f50b7fe2c9,
         type: 3}
@@ -6138,7 +6189,7 @@ Transform:
   - {fileID: 8578634114400102282}
   - {fileID: 732840717}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3124599601787677141
 SpriteRenderer:
@@ -6205,8 +6256,8 @@ GameObject:
   - component: {fileID: 3124599601787677144}
   - component: {fileID: 3124599601787677148}
   - component: {fileID: 3124599601787677147}
-  - component: {fileID: 3124599601787677146}
   - component: {fileID: 3124599601787677149}
+  - component: {fileID: 3124599601787677146}
   m_Layer: 0
   m_Name: Pierre
   m_TagString: Untagged
@@ -6249,19 +6300,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 3124599601787677143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd6ad05b7ed642f4eb5f151699e36e83, type: 3}
+  m_Script: {fileID: 11500000, guid: 10dcbe615ac1b74418b18860c7f3ddee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 2
-  conditionKey: 
+  cost: 0
+  conditionKey: DoesNotHaveTheMap
   sentences:
-  - bonjour paulo!
-  - hey pierre, you wouldnt happen to have run into any significant-looking acorns
-    on your map-making jaunts, have you?
-  - je regrette, cant say that i have, paulo
-  - hm, thanks anyways pierre
+  - ohoh youve found it! oh how ive missed you
+  - you two need a room?
+  - non, we're comfortable with pda, paul
+  - i kid. with this i could show you how to get to that runescape i've heard of
+  - see, here? past the lake, and into the far woods
+  - hm, thank you pierre. i'll let you know if it's a booby trap
   voiceActing:
-  - {fileID: 169579717}
+  - {fileID: 1857262799}
+  - {fileID: 1857262799}
+  - {fileID: 1857262799}
   - {fileID: 1857262799}
   - {fileID: 1857262799}
   - {fileID: 1857262799}
@@ -6269,10 +6323,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
   - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: 319fc13ada3148e43b1c99b8f7f2680d, type: 3}
   - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
-  farewellDialogue: one more thing, actually, paulo!
-  farewellAudio: {fileID: 169579717}
-  questUpdates: 02000000
+  farewellDialogue: bonne chance, paulo!
+  farewellAudio: {fileID: 1857262799}
+  questUpdates: 00000000
 --- !u!114 &3124599601787677147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6312,11 +6368,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3124599601787677143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18e122142b784cd49aa4ea76820ea900, type: 3}
+  m_Script: {fileID: 11500000, guid: 10dcbe615ac1b74418b18860c7f3ddee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
-  conditionKey: 
+  conditionKey: HasMetCartographer
   sentences:
   - hello again, paulo
   - unfortunalement ma carte a disparu, i've lost my trusty map
@@ -6331,17 +6387,17 @@ MonoBehaviour:
   - i'll let you know if i run into it
   - merci, paul
   voiceActing:
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 169579717}
-  - {fileID: 169579717}
+  - {fileID: 1857262799}
+  - {fileID: 1857262799}
+  - {fileID: 1857262799}
+  - {fileID: 1857262799}
+  - {fileID: 1857262799}
+  - {fileID: 1857262799}
+  - {fileID: 1857262799}
+  - {fileID: 1857262799}
+  - {fileID: 1857262799}
+  - {fileID: 1857262799}
+  - {fileID: 1857262799}
   characterImages:
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
@@ -6354,23 +6410,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
   - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
-  farewellDialogue: a bientot, mon amis!
-  farewellAudio: {fileID: 169579717}
+  farewellDialogue: a bientot, mon amis
+  farewellAudio: {fileID: 1857262799}
   questUpdates: 
---- !u!114 &3798776014671241682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990909771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6541a1d5487c4843accf59bcb9b3237, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  preconditionName: 
-  destroy: 0
 --- !u!65 &5410557402448540134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6510,7 +6552,7 @@ PrefabInstance:
     - target: {fileID: 8336542142948155447, guid: b957d41e3a0965a45b3038465df66aaa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8336542142948155447, guid: b957d41e3a0965a45b3038465df66aaa,
         type: 3}

@@ -6,11 +6,15 @@ public class DialoguePreconditions : MonoBehaviour
 {
     public Dictionary<string, bool> preconditions = new Dictionary<string, bool>();
 
-    void Start()
+    void Start() // true = inaccessible, false = accessible
     {
-        preconditions.Add("HasLightBulb", false);
-        preconditions.Add("HasMetCartographer", false);
+        // GENERAL
 
+        // PIERRE
+        preconditions.Add("HasMetCartographer", false);
+        preconditions.Add("DoesNotHaveTheMap", true);
+
+        // YIGS
         preconditions.Add("HasMetYigs", false);
         preconditions.Add("HasTheSeed", false);
 

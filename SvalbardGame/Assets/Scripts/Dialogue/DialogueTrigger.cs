@@ -17,7 +17,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            dialoguePreconditions[preconditionName] = true;
+            dialoguePreconditions[preconditionName] = false;
             if(destroy)
                 Destroy(gameObject);
         }
