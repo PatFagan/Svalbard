@@ -17,8 +17,15 @@ public class gMoveToPos : MonoBehaviour
 
     IEnumerator MoveToTarget()
     {
-        while (targetPos != currentPos)
+        targetPos = target.GetComponent<Transform>().position;
+        followerTransform = follower.GetComponent<Transform>();
+        currentPos = new Vector3(followerTransform.position.x, followerTransform.position.y, followerTransform.position.z);
+
+        while (targetPos != currentPos && target) // while not arrived and while target exists
         {
+            if (!target)
+                break;
+
             currentPos = new Vector3(followerTransform.position.x, followerTransform.position.y, followerTransform.position.z);
 
             // position = Vector2.MoveTowards(from, to, speed);
@@ -35,10 +42,6 @@ public class gMoveToPos : MonoBehaviour
         print("moveTo state");
 
         follower = goapAgent;
-        targetPos = target.GetComponent<Transform>().position;
-        followerTransform = follower.GetComponent<Transform>();
-        currentPos = new Vector3(followerTransform.position.x, followerTransform.position.y, followerTransform.position.z);
-        print(targetPos);
 
         if (target)
             StartCoroutine(MoveToTarget());
