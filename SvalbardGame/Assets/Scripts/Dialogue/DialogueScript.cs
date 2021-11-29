@@ -48,6 +48,7 @@ public class DialogueScript : MonoBehaviour
         dialogueBox.text = "";
         currentCharacter.sprite = characterImages[index];
         currentCharacter.enabled = true;
+        farewellAudio.volume = 1f;
         StartCoroutine(LoadDialogue());
         if (vendorButton)
             vendorButton.SetActive(true);
@@ -66,6 +67,7 @@ public class DialogueScript : MonoBehaviour
 
     IEnumerator LoadDialogue()
     {
+        sentences[index] = " " + sentences[index]; // add space at beginning to work around error where talking to someone before farewell ends cuts off the first letter of the new sentence
         voiceActing[index].Play();
         foreach (char letter in sentences[index].ToCharArray())
         {
@@ -115,6 +117,9 @@ public class DialogueScript : MonoBehaviour
         {
             farewellAudio.Play();
             dialogueBox.text = farewellDialogue;
+            farewellDialogue = ""; 
+            yield return new WaitWhile(() => farewellAudio.isPlaying);
+            farewellAudio.volume = 0f;
             currentCharacter.enabled = false;
             if (vendorButton)
                 vendorButton.SetActive(false);
