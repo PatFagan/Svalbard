@@ -12,4 +12,10 @@ public abstract class gGoapAction : MonoBehaviour
 
     public abstract bool CheckPreconditions();
     public abstract void RunAction();
+
+    public void NextState()
+    {
+        gFSM fsmScript = GameObject.Find(aiName).GetComponent<gFSM>();
+        fsmScript.currentState = "Goap";
+    }
 }

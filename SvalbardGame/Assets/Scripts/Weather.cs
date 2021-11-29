@@ -21,7 +21,7 @@ public class Weather : MonoBehaviour
         var em = ps.emission;
 
         //weather.startDelay = 0f;
-        print(timer);
+        //print(timer);
         timer--;
 
         if (timer < 0f)

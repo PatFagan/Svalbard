@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class gEatFood : gGoapAction
 {
-    // get agent status and follow script
+    // get agent status and moveTo script
     gGoapAgent goapAgentScript;
-    Follow followScript;
+    gMoveToPos moveToScript;
     void Start()
     {
         goapAgentScript = GameObject.Find(aiName).GetComponent<gGoapAgent>();
-        followScript = GameObject.Find("GoapActionKeeper").GetComponent<Follow>();
+        moveToScript = GameObject.Find("GoapActionKeeper").GetComponent<gMoveToPos>();
     }
 
     public gEatFood()
@@ -25,7 +25,10 @@ public class gEatFood : gGoapAction
         if (preconditions["IsHungry"] == true)
             return true;
         else
+        {
+            NextState();
             return false;
+        }
     }
 
     void Update()
@@ -36,6 +39,6 @@ public class gEatFood : gGoapAction
     public override void RunAction()
     {
         print("eating food, cost: " + cost);
-        followScript.FollowTarget("Food", GameObject.Find(aiName));
+        moveToScript.SetTarget("Food", GameObject.Find(aiName));
     }
 }

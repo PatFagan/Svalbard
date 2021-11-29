@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class gChopWood : gGoapAction
 {
-    // get agent status and follow script
+    // get agent status and moveTo script
     gGoapAgent goapAgentScript;
-    Follow followScript;
+    gMoveToPos moveToScript;
     void Start()
     {
         goapAgentScript = GameObject.Find(aiName).GetComponent<gGoapAgent>();
-        followScript = GameObject.Find("GoapActionKeeper").GetComponent<Follow>();
+        moveToScript = GameObject.Find("GoapActionKeeper").GetComponent<gMoveToPos>();
     }
 
     public gChopWood()
@@ -25,7 +25,10 @@ public class gChopWood : gGoapAction
         if (preconditions["HasAxe"] == true)
             return true;
         else
+        {
+            NextState();
             return false;
+        }
     }
 
     void Update()
@@ -36,6 +39,6 @@ public class gChopWood : gGoapAction
     public override void RunAction()
     {
         print("chopping wood, cost: " + cost);
-        followScript.FollowTarget("Wood", GameObject.Find(aiName));
+        moveToScript.SetTarget("Wood", GameObject.Find(aiName));
     }
 }

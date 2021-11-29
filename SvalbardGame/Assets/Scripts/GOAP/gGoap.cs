@@ -44,10 +44,6 @@ public class gGoap : MonoBehaviour
             }
         }
 
-        // (this will automatically run planning since if an axe has already...
-        // ...been picked up, then the preconditions will have been met...
-        // ...and the cost will be low enough to make 'chop wood' the best action to go to next
-
         fsmScript = goapAgent.GetComponent<gFSM>();
         fsmScript.currentState = "MoveToPos"; // set to next state after finished
     }

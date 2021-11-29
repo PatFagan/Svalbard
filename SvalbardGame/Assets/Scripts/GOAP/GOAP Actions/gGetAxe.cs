@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class gGetAxe : gGoapAction
 {
-    // get agent status and follow script
+    // get agent status and moveTo script
     gGoapAgent goapAgentScript;
-    Follow followScript;
+    gMoveToPos moveToScript;
     void Start()
     {
         goapAgentScript = GameObject.Find(aiName).GetComponent<gGoapAgent>();
-        followScript = GameObject.Find("GoapActionKeeper").GetComponent<Follow>();
+        moveToScript = GameObject.Find("GoapActionKeeper").GetComponent<gMoveToPos>();
     }
 
     public gGetAxe()
@@ -18,24 +18,33 @@ public class gGetAxe : gGoapAction
         name = "GetAxe";
         cost = 2;
         preconditions.Add("NeedsAxe", true);
+        preconditions.Add("AxeExists", false);
     }
 
     public override bool CheckPreconditions()
     {
-        if (preconditions["NeedsAxe"] == true)
+        if (preconditions["NeedsAxe"] == true && preconditions["AxeExists"] == true)
             return true;
         else
+        {
+            NextState();
             return false;
+        }
     }
 
     void Update()
     {
         preconditions["NeedsAxe"] = !goapAgentScript.hasAxe;
+
+        if (GameObject.FindGameObjectWithTag("Axe"))
+            preconditions["AxeExists"] = true;
+        else
+            preconditions["AxeExists"] = false;
     }
 
     public override void RunAction()
     {
         print("getting axe, cost: " + cost);
-        followScript.FollowTarget("Axe", GameObject.Find(aiName));
+        moveToScript.SetTarget("Axe", GameObject.Find(aiName));
     }
 }
