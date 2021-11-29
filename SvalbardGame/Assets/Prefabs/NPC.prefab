@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &696304678428287766
+--- !u!1 &5939491189087254768
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 696304678428287767}
-  - component: {fileID: 696304678428287764}
+  - component: {fileID: 5939491189087254769}
+  - component: {fileID: 5939491189087254770}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -17,27 +17,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &696304678428287767
+--- !u!4 &5939491189087254769
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696304678428287766}
+  m_GameObject: {fileID: 5939491189087254768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2518932357791533520}
+  m_Father: {fileID: 8732903044516434486}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &696304678428287764
+--- !u!82 &5939491189087254770
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696304678428287766}
+  m_GameObject: {fileID: 5939491189087254768}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -136,7 +136,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &2518932357791533517
+--- !u!1 &8682731884841888236
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,12 +144,72 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2518932357791533520}
-  - component: {fileID: 2518932357791533519}
-  - component: {fileID: 2518932357791533518}
-  - component: {fileID: 2518932357791533522}
-  - component: {fileID: 2518932357791533506}
-  - component: {fileID: 2518932357791533521}
+  - component: {fileID: 2693189420024618102}
+  - component: {fileID: 3614042244962446688}
+  - component: {fileID: 6583042152890196678}
+  m_Layer: 0
+  m_Name: DitheringZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2693189420024618102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8682731884841888236}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8732903044516434486}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3614042244962446688
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8682731884841888236}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.024815, y: 30, z: 9.870472}
+  m_Center: {x: 0, y: 0, z: -2.7641087}
+--- !u!114 &6583042152890196678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8682731884841888236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba00ac5bf48162d43b200ae94bdec49c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 8732903044516434473}
+--- !u!1 &8732903044516434475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8732903044516434486}
+  - component: {fileID: 8732903044516434473}
+  - component: {fileID: 8732903044516434469}
+  - component: {fileID: 8732903044516434468}
+  - component: {fileID: 8732903044516434464}
+  - component: {fileID: 8732903044516434471}
+  - component: {fileID: 8732903044516434465}
+  - component: {fileID: 8732903044516434470}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -157,29 +217,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2518932357791533520
+--- !u!4 &8732903044516434486
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2518932357791533517}
+  m_GameObject: {fileID: 8732903044516434475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 34.5, y: 4.87, z: 13.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 9125606954056206224}
-  - {fileID: 696304678428287767}
+  - {fileID: 2693189420024618102}
+  - {fileID: 5939491189087254769}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2518932357791533519
+--- !u!212 &8732903044516434473
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2518932357791533517}
+  m_GameObject: {fileID: 8732903044516434475}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -212,7 +272,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -224,67 +284,89 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &2518932357791533518
+--- !u!65 &8732903044516434469
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2518932357791533517}
+  m_GameObject: {fileID: 8732903044516434475}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 23.01481, y: 27.86, z: 24.12458}
-  m_Center: {x: 0, y: 0, z: -8.64229}
---- !u!114 &2518932357791533522
-MonoBehaviour:
+  m_Size: {x: 22.23, y: 15.25, z: 21.01}
+  m_Center: {x: 0, y: 0, z: -2.8636038}
+--- !u!65 &8732903044516434468
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2518932357791533517}
+  m_GameObject: {fileID: 8732903044516434475}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba2cb35b911ab344897ff23266679e27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2518932357791533506
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5, z: 3.99}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8732903044516434464
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2518932357791533517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ed920a2e8c7dfd4198d3f1d9fb9c737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 0
-  indexCap: 5
---- !u!114 &2518932357791533521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2518932357791533517}
+  m_GameObject: {fileID: 8732903044516434475}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb83396a70c15734593b466e33f967d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questText: {fileID: 0}
-  dialogueBox: {fileID: 0}
+  vendorButton: {fileID: 0}
+  vendorMenu: {fileID: 0}
+  index: 0
+--- !u!114 &8732903044516434471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8732903044516434475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dfbfdd66a7190943989251a5eba5d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversations:
+  - {fileID: 8732903044516434470}
+  - {fileID: 8732903044516434465}
+--- !u!114 &8732903044516434465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8732903044516434475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10dcbe615ac1b74418b18860c7f3ddee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 0
+  conditionKey: HasMetCartographer
   sentences:
-  - bonsoir mon amis!
-  - comment ca va?
-  - ma carte a disparu! my map has gone missing, i'm afraid
-  - merde! those skellies probably took it
-  - if you could bring it back to me, i'd be sure to make it worth your while
-  - if not, then me parle pas, my friend!
-  - oh, ma carte! merci beaucoup!
+  - hello again, paulo
+  - unfortunalement ma carte a disparu, i've lost my trusty map
+  - merde! (i bet those skellie scoundrels nabbed it)
+  - ~~WE HAVE DONE NO SUCH THING MAP MAN~~
+  - ~~YOUR MAP IS OF NO USE TO OUR GREATER PURPOSE~~
+  - uhuh, but my ex-wife sure was
+  - ...
+  - anyways, paulo, if you could find it for me i'd be sure to make it worth your
+    while
+  - if not, then kindly me parle pas, mon amis
+  - i'll let you know if i run into it
+  - merci, paul
   voiceActing:
   - {fileID: 0}
   - {fileID: 0}
@@ -293,86 +375,60 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  farewellDialogue: a bientot!
-  farewellAudio: {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   characterImages:
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
+  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: 238f60716d468fb4ebfc9828d75cbad4, type: 3}
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
-  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
-  currentCharacter: {fileID: 0}
---- !u!1 &2574871564072251914
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9125606954056206224}
-  - component: {fileID: 7629980577467168390}
-  - component: {fileID: 44793396476508448}
-  - component: {fileID: 2574871564072251915}
-  m_Layer: 0
-  m_Name: DitheringZone
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9125606954056206224
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2574871564072251914}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2518932357791533520}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7629980577467168390
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2574871564072251914}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9.024815, y: 30, z: 12.171127}
-  m_Center: {x: 0, y: 0, z: -3.9144363}
---- !u!114 &44793396476508448
+  farewellDialogue: a bientot, mon amis
+  farewellAudio: {fileID: 0}
+  questUpdates: 
+--- !u!114 &8732903044516434470
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2574871564072251914}
+  m_GameObject: {fileID: 8732903044516434475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba00ac5bf48162d43b200ae94bdec49c, type: 3}
+  m_Script: {fileID: 11500000, guid: 10dcbe615ac1b74418b18860c7f3ddee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 2518932357791533519}
---- !u!65 &2574871564072251915
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2574871564072251914}
-  m_Material: {fileID: 13400000, guid: d642b394c1e46d44eb5a9ef0aa1a2cd0, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 10, z: 4.6110964}
-  m_Center: {x: 0, y: 0, z: -10.401703}
+  cost: 0
+  conditionKey: DoesNotHaveTheMap
+  sentences:
+  - ohoh youve found it! oh how ive missed you
+  - you two need a room?
+  - non, we're comfortable with pda, paul
+  - i kid. with this i could show you how to get to that runescape i've heard of
+  - see, here? past the lake, and into the far woods
+  - hm, thank you pierre. i'll let you know if it's a booby trap
+  voiceActing:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  characterImages:
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: 319fc13ada3148e43b1c99b8f7f2680d, type: 3}
+  - {fileID: 21300000, guid: c2bab1e4abe71da45bb5a3ffadecf354, type: 3}
+  farewellDialogue: bonne chance, paulo!
+  farewellAudio: {fileID: 0}
+  questUpdates: 00000000
