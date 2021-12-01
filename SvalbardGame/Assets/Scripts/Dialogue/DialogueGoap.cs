@@ -27,7 +27,7 @@ public class DialogueGoap : MonoBehaviour
             {
                 dialogueScript.StartDialogue(conversations[i]);
                 conversations[i].UpdatePreconditions();
-                conversations.RemoveAt(i);
+                conversations.RemoveAt(i); // removes dialogue from list
                 break;
             }
         }
