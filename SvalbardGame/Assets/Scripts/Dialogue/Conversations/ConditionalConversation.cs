@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ConditionalConversation : Conversation
 {
+    // checks to see if all preconditions are accessible
+    // if so, it returns true
     public override bool CheckPreconditions()
     {
         if (zeroConditions)
