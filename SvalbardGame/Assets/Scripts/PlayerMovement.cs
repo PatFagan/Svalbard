@@ -37,9 +37,9 @@ public class PlayerMovement : MonoBehaviour
 
         // sprite flipping
         if (horizontal > 0)
-            spriteRenderer.flipX = true;
-        else if (horizontal < 0)
             spriteRenderer.flipX = false;
+        else if (horizontal < 0)
+            spriteRenderer.flipX = true;
 
         // sprinting
         if (Input.GetButton("Sprint") && sprintGauge > 0f) // if dodge button pressed, the dodge

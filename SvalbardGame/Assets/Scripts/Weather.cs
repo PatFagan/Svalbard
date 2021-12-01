@@ -22,7 +22,7 @@ public class Weather : MonoBehaviour
 
         //weather.startDelay = 0f;
         //print(timer);
-        timer--;
+        //timer--;
 
         if (timer < 0f)
         {
