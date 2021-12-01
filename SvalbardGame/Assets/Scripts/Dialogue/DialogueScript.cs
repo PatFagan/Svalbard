@@ -45,7 +45,6 @@ public class DialogueScript : MonoBehaviour
 
         index = 0;
         nearNPC = true;
-        dialogueBox.text = "";
         currentCharacter.sprite = characterImages[index];
         currentCharacter.enabled = true;
         farewellAudio.volume = 1f;
@@ -67,14 +66,19 @@ public class DialogueScript : MonoBehaviour
 
     IEnumerator LoadDialogue()
     {
-        sentences[index] = " " + sentences[index]; // add space at beginning to work around error where talking to someone before farewell ends cuts off the first letter of the new sentence
+        dialogueBox.text = "";
+        //sentences[index] = " " + sentences[index]; // add space at beginning to work around error where talking to someone before farewell ends cuts off the first letter of the new sentence
         voiceActing[index].Play();
+        yield return new WaitForSeconds(.02f);
         foreach (char letter in sentences[index].ToCharArray())
         {
-            if (nearNPC == true)
+            dialogueBox.text += letter;
+            yield return new WaitForSeconds(.01f);
+
+            if (nearNPC == false)
             {
-                dialogueBox.text += letter;
-                yield return new WaitForSeconds(.01f);
+                dialogueBox.text = "";
+                break;
             }
         }
         CheckQuestStatus(index);
