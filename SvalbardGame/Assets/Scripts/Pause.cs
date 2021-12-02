@@ -7,6 +7,7 @@ public class Pause : MonoBehaviour
 {
     public GameObject pauseMenu;
     public Button exitButton, resumeButton;
+    bool pauseBool = false;
 
     void Start()
     {
@@ -18,14 +19,16 @@ public class Pause : MonoBehaviour
     {
         if (Input.GetButtonDown("Pause"))
         {
-            pauseMenu.SetActive(true);
+            pauseBool = !pauseBool;
+            pauseMenu.SetActive(pauseBool);
             Time.timeScale = 0f;
         }
     }
 
     public void ResumeButton()
     {
-        pauseMenu.SetActive(false); 
+        pauseBool = false;
+        pauseMenu.SetActive(pauseBool); 
         Time.timeScale = 1f;
     }
 

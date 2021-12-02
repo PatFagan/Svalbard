@@ -11,6 +11,8 @@ public class MainMenuManager : MonoBehaviour
 
     public Image fade;
     public Animator fadeAnim;
+    public AudioSource mainTheme;
+    public AudioSource startMusic;
 
     void Start()
     {
@@ -33,6 +35,8 @@ public class MainMenuManager : MonoBehaviour
     void StartButton()
     {
         StartCoroutine(Fading(nextScene));
+        mainTheme.volume = 0f;
+        startMusic.Play();
     }
 
     void ExitButton()
