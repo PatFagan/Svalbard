@@ -12,6 +12,7 @@ TagManager:
   - GunCursor
   - Bullet
   - Target
+  - Snowmobile
   layers:
   - Default
   - TransparentFX

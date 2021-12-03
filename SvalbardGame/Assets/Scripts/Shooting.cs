@@ -19,8 +19,10 @@ public class Shooting : MonoBehaviour
     public Image equipProgress;
     bool equipTimerLocked = false;
 
+    PlayerMovement playerMovementScript;
     void Start()
     {
+        playerMovementScript = GameObject.Find("Player").GetComponent<PlayerMovement>();
         spawnPos = new Vector3(offsetX, offsetY, offsetZ);
         timer = 0;
     }
@@ -56,6 +58,7 @@ public class Shooting : MonoBehaviour
             {
                 Instantiate(cursor, transform.position + spawnPos, Quaternion.identity);
                 hammerPulled = true;
+                playerMovementScript.immobile = hammerPulled; // make player immobile if hammer is pulled
             }
         }
     }
@@ -66,6 +69,7 @@ public class Shooting : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         timer = 0;
         hammerPulled = false;
+        playerMovementScript.immobile = hammerPulled; // make player immobile if hammer is pulled
         Destroy(GameObject.FindGameObjectWithTag("GunCursor"));
     }
 

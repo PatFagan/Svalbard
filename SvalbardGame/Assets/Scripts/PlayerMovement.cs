@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     float horizontal, vertical, BASE_MOVE_SPEED;
     public float moveSpeed;
     public Vector3 movement;
+    public bool immobile = false;
 
     // components
     public SpriteRenderer spriteRenderer;
@@ -32,11 +33,11 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
         movement = new Vector3(horizontal, 0f, vertical);
-        if (shootingScript.hammerPulled == false)
+        if (immobile == false)
         {
             rigidbody.velocity = movement * moveSpeed; 
         }
-        if (shootingScript.hammerPulled == true) // shooting stance
+        else if (immobile == true) // shooting stance
         {
             rigidbody.velocity = new Vector3(0f, 0f, 0f);
         }
@@ -64,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer.flipY = shootingScript.gunEquipped; // FOR TESTING
 
         // anims
-        print(vertical);
         if (rigidbody.velocity.z == 0)
             animator.Play("right-arrow-anim");
         else if (vertical == -1 && (horizontal == 1 || horizontal == -1))

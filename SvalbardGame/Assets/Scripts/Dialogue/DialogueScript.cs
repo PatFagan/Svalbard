@@ -109,7 +109,7 @@ public class DialogueScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && nearNPC == true && dialogueSpamCooldown == false)
+        if (Input.GetButtonDown("Interact") && nearNPC == true && dialogueSpamCooldown == false)
         {
             StartCoroutine(DialogueSpamCooldown());
             if (dialogueBox.text == sentences[index])
