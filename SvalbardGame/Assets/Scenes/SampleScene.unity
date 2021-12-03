@@ -996,7 +996,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df115ec5a8e764e4284f24b6a6f52354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
+  targetPos: {x: 0, y: 0, z: 0}
+  currentPos: {x: 0, y: 0, z: 0}
 --- !u!114 &334408723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8235,7 +8237,7 @@ Animator:
   m_GameObject: {fileID: 2072063279}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 25b449a88821f7244a91b5ea5abac363, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5978b494c6259a64baf60a307260f5fe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -8283,7 +8285,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 319fc13ada3148e43b1c99b8f7f2680d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -7,8 +7,8 @@ public class gMoveToPos : MonoBehaviour
     public float speed;
     GameObject target;
     Transform followerTransform;
-    Vector3 targetPos;
-    Vector3 currentPos;
+    public Vector3 targetPos;
+    public Vector3 currentPos;
     GameObject follower;
     public void SetTarget(string targetTag, GameObject newFollower)
     {
