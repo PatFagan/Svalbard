@@ -910,7 +910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &334408717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6416,6 +6416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1571801041}
   - component: {fileID: 1571801042}
+  - component: {fileID: 1571801043}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -6488,6 +6489,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1571801043
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571801040}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1574866660
 GameObject:
   m_ObjectHideFlags: 0
@@ -8138,13 +8158,14 @@ GameObject:
   - component: {fileID: 2072063286}
   - component: {fileID: 2072063282}
   - component: {fileID: 2072063283}
+  - component: {fileID: 2072063284}
   m_Layer: 0
   m_Name: TestAI
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2072063280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8202,6 +8223,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &2072063284
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072063279}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 25b449a88821f7244a91b5ea5abac363, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &2072063286
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8265,6 +8305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0065329be7ff0dd418faa37fe0d23a77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentAnimation: 
   hasAxe: 0
   isHungry: 0
 --- !u!1 &2093372529
@@ -13693,6 +13734,8 @@ MonoBehaviour:
   vendorButton: {fileID: 1741442630}
   vendorMenu: {fileID: 1939019531}
   index: 0
+  nearNPC: 0
+  sentences: []
 --- !u!114 &3124599601787677149
 MonoBehaviour:
   m_ObjectHideFlags: 0

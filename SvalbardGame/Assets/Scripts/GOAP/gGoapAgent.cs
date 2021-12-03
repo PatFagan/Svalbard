@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class gGoapAgent : MonoBehaviour
 {
+    public string currentAnimation;
+
     public bool hasAxe;
     public bool isHungry;
 
