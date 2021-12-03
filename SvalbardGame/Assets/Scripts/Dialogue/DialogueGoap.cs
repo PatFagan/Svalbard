@@ -17,17 +17,26 @@ public class DialogueGoap : MonoBehaviour
         //gnomeSort(conversations);
     }
 
+    int deleteHere;
     public void ChooseDialogue()
     {
+        // before setting next conversation
+        if (dialogueScript.index == dialogueScript.sentences.Length - 1 && conversations.Count > 2) // if all diaglogue has been exhausted
+        {
+            conversations.RemoveAt(deleteHere); // remove last conversation from list
+        }
+
         // run through goap actions
         // run first action with all preconditions met
-        for (int i = 0; i < conversations.Count; i ++)
+        for (int i = 0; i <= conversations.Count; i++)
         {
+            if (conversations.Count == 1)
+                break;
+
             if (conversations[i].CheckPreconditions())
             {
                 dialogueScript.StartDialogue(conversations[i]);
-                //conversations[i].UpdatePreconditions();
-                conversations.RemoveAt(i); // removes dialogue from list
+                deleteHere = i;
                 break;
             }
         }

@@ -14,8 +14,8 @@ public class DialogueScript : MonoBehaviour
 
     public int index; // current dialogue being said
 
-    bool nearNPC = false;
-    string[] sentences;
+    public bool nearNPC = false;
+    public string[] sentences;
     AudioSource[] voiceActing;
     Sprite[] characterImages;
     string farewellDialogue;
@@ -34,6 +34,7 @@ public class DialogueScript : MonoBehaviour
         currentCharacter = GameObject.Find("CharacterImage").GetComponent<Image>();
     }
 
+    // start conversation on collision with NPC
     public void StartDialogue(Conversation conversation)
     {
         sentences = conversation.sentences;
@@ -53,6 +54,7 @@ public class DialogueScript : MonoBehaviour
             vendorButton.SetActive(true);
     }
 
+    // begin next line, called from NextLine()
     void ContinueDialogue()
     {
         nearNPC = true;
@@ -64,10 +66,10 @@ public class DialogueScript : MonoBehaviour
             vendorButton.SetActive(true);
     }
 
+    // add in line, letter by letter
     IEnumerator LoadDialogue()
     {
         dialogueBox.text = "";
-        //sentences[index] = " " + sentences[index]; // add space at beginning to work around error where talking to someone before farewell ends cuts off the first letter of the new sentence
         voiceActing[index].Play();
         yield return new WaitForSeconds(.02f);
         foreach (char letter in sentences[index].ToCharArray())
@@ -84,14 +86,15 @@ public class DialogueScript : MonoBehaviour
         CheckQuestStatus(index);
     }
 
+    // go to next line, on button press
     public void NextLine()
     {
-        if (index < sentences.Length - 1)
+        if (index < sentences.Length - 1) // go to next line
         {
             index++;
             ContinueDialogue();
         }
-        else if (index == sentences.Length - 1)
+        else if (index == sentences.Length - 1) // conversation over, go to next conversation
         {
             dialogueGoapScript.ChooseDialogue();
         }
@@ -110,6 +113,8 @@ public class DialogueScript : MonoBehaviour
             {
                 NextLine();
             }
+            else
+                FinishLine();
         }
         timer--;
     }
