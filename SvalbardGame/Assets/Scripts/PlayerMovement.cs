@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     // components
     public SpriteRenderer spriteRenderer;
     public Rigidbody rigidbody;
+    public Animator animator;
 
     float MAX_SPRINT_GAUGE = 30f;
     float sprintGauge;
@@ -42,9 +43,9 @@ public class PlayerMovement : MonoBehaviour
 
         // sprite flipping
         if (horizontal > 0)
-            spriteRenderer.flipX = true;
-        else if (horizontal < 0)
             spriteRenderer.flipX = false;
+        else if (horizontal < 0)
+            spriteRenderer.flipX = true;
 
         // sprinting
         if (Input.GetButton("Sprint") && sprintGauge > 0f) // if dodge button pressed, the dodge
@@ -61,5 +62,18 @@ public class PlayerMovement : MonoBehaviour
 
         // gun
         spriteRenderer.flipY = shootingScript.gunEquipped; // FOR TESTING
+
+        // anims
+        print(vertical);
+        if (rigidbody.velocity.z == 0)
+            animator.Play("right-arrow-anim");
+        else if (vertical == -1 && (horizontal == 1 || horizontal == -1))
+            animator.Play("down-right-arrow-anim");
+        else if (vertical == 1 && (horizontal == 1 || horizontal == -1))
+            animator.Play("up-right-arrow-anim");
+        else if (vertical == 1)
+            animator.Play("up-arrow-anim");
+        else if (vertical == -1)
+            animator.Play("down-arrow-anim");
     }
 }

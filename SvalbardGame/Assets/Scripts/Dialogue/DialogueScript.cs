@@ -24,6 +24,8 @@ public class DialogueScript : MonoBehaviour
 
     float timer;
 
+    bool dialogueSpamCooldown = false;
+
     DialogueGoap dialogueGoapScript;
     void Start()
     {
@@ -107,8 +109,9 @@ public class DialogueScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && nearNPC == true)
+        if (Input.GetKeyDown(KeyCode.Space) && nearNPC == true && dialogueSpamCooldown == false)
         {
+            StartCoroutine(DialogueSpamCooldown());
             if (dialogueBox.text == sentences[index])
             {
                 NextLine();
@@ -117,6 +120,13 @@ public class DialogueScript : MonoBehaviour
                 FinishLine();
         }
         timer--;
+    }
+
+    IEnumerator DialogueSpamCooldown()
+    {
+        dialogueSpamCooldown = true;
+        yield return new WaitForSeconds(.5f);
+        dialogueSpamCooldown = false;
     }
 
     IEnumerator CloseDialogue()
