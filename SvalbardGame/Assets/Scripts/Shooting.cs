@@ -27,32 +27,32 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        equipProgress.fillAmount = equipTimer / EQUIP_TIME;
+        equipProgress.fillAmount = equipTimer / EQUIP_TIME; // displays the equip progress bar
 
         timer += Time.deltaTime; // timer
 
-        if (Input.GetButtonDown("EquipGun") || Input.GetButtonUp("EquipGun"))
-            StartCoroutine(EquipTimer());
+        if (Input.GetButtonDown("EquipGun") || Input.GetButtonUp("EquipGun")) // resets the equip button hold down timer
+            equipTimer = 0f;
 
         if (Input.GetButton("EquipGun") && hammerPulled == false) // if gun isn't equipped, equip it
         {
-            if (equipTimerLocked == false)
+            if (equipTimerLocked == false) // timer lock gives a brief break between equips, so you don't accidentally equip & re-equip at once
                 equipTimer++;
 
-            if (hammerPulled == false && equipTimer > EQUIP_TIME)
+            if (hammerPulled == false && equipTimer > EQUIP_TIME) // (can't unequip gun if hammer is pulled)
             {
                 gunEquipped = !gunEquipped;
                 StartCoroutine(EquipTimer());
             }
         }
 
-        if (Input.GetButtonDown("Interact") && timer >= timeBetweenShots && gunEquipped)
+        if (Input.GetButtonDown("Interact") && timer >= timeBetweenShots && gunEquipped) // press FIRE
         {
             if (GameObject.FindGameObjectWithTag("GunCursor")) // if cursor exists, spawn bullet
             {
                 StartCoroutine(FireOne());
             }
-            else if (!GameObject.FindGameObjectWithTag("GunCursor")) // spawn cursor
+            else if (!GameObject.FindGameObjectWithTag("GunCursor")) // if not, then spawn cursor
             {
                 Instantiate(cursor, transform.position + spawnPos, Quaternion.identity);
                 hammerPulled = true;
@@ -60,7 +60,7 @@ public class Shooting : MonoBehaviour
         }
     }
 
-    IEnumerator FireOne()
+    IEnumerator FireOne() // fire bullet, destroy cursor
     {
         Instantiate(projectile, transform.position + spawnPos, Quaternion.identity);
         yield return new WaitForSeconds(.1f);
@@ -69,7 +69,7 @@ public class Shooting : MonoBehaviour
         Destroy(GameObject.FindGameObjectWithTag("GunCursor"));
     }
 
-    IEnumerator EquipTimer()
+    IEnumerator EquipTimer() // reset equip timer and start brief cooldown between equips
     {
         equipTimer = 0f;
         equipTimerLocked = true;
