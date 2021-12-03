@@ -9,6 +9,8 @@ TagManager:
   - Wood
   - Food
   - NPC
+  - GunCursor
+  - Bullet
   layers:
   - Default
   - TransparentFX
