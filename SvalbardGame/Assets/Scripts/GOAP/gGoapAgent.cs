@@ -32,7 +32,7 @@ public class gGoapAgent : MonoBehaviour
         if (collider.gameObject.tag == "Food")
         {
             print("eating...");
-            hungerTimer = 5000f;
+            hungerTimer = 2000f;
             isHungry = false;
         }
         if (collider.gameObject.tag == "Axe")

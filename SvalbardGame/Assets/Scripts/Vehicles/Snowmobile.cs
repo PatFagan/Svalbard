@@ -55,9 +55,9 @@ public class Snowmobile : MonoBehaviour
 
             print(hMult);
 
-            if (horizontal != 0 && hMult < 15f)
+            if (horizontal != 0 && hMult < 7f)
                 hMult += .01f;
-            if (vertical != 0 && vMult < 15f)
+            if (vertical != 0 && vMult < 7f)
                 vMult += .01f;
             else if (vertical == 0 && horizontal == 0)
             {
