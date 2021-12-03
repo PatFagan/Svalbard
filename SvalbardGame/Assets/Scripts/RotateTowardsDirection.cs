@@ -5,6 +5,7 @@ using UnityEngine;
 public class RotateTowardsDirection : MonoBehaviour
 {
     bool calculateEnabled;
+    public Vector3 moveDirection;
 
     void Start()
     {
@@ -20,12 +21,12 @@ public class RotateTowardsDirection : MonoBehaviour
     IEnumerator CalculateRotation()
     {
         Vector3 oldPosition = transform.position;
-        yield return new WaitForSeconds(.1f);
-        Vector3 moveDirection = transform.position - oldPosition;
+        yield return new WaitForSeconds(.01f);
+        moveDirection = transform.position - oldPosition;
         //print(moveDirection);
         if (moveDirection != Vector3.zero)
         {
-            float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+            float angle = Mathf.Atan2(moveDirection.z, moveDirection.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
         calculateEnabled = true;

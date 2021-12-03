@@ -34,7 +34,7 @@ public class Inventory : MonoBehaviour
             inventoryMenu.SetActive(inventoryMenuBool);
         }
 
-        print(health);
+        //print(health);
         healthBar.fillAmount = health;
     }
 }

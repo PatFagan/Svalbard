@@ -22,7 +22,7 @@ public class Shooting : MonoBehaviour
     {
         timer += Time.deltaTime; // timer
 
-        if (Input.GetButtonDown("EquipGun")) // if gun isn't equipped, equip it
+        if (Input.GetButtonDown("EquipGun") && hammerPulled == false) // if gun isn't equipped, equip it
             gunEquipped = !gunEquipped;
 
         if (Input.GetButtonDown("Interact") && timer >= timeBetweenShots && gunEquipped)

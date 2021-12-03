@@ -8,6 +8,7 @@ public class FollowOnStart : MonoBehaviour
     private Transform target;
     public string targetTag;
     Vector3 trackingPosition;
+    public bool destroyOnArrival;
 
     void Start()
     {
@@ -23,5 +24,8 @@ public class FollowOnStart : MonoBehaviour
     {
         // move towards target
         transform.position = Vector3.MoveTowards(transform.position, trackingPosition, speed * Time.fixedDeltaTime);
+
+        if (transform.position == trackingPosition && destroyOnArrival)
+            Destroy(gameObject);
     }
 }
