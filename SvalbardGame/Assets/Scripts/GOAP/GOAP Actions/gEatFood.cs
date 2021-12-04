@@ -39,6 +39,7 @@ public class gEatFood : gGoapAction
     public override void RunAction()
     {
         print("eating food, cost: " + cost);
+        goapAgentScript.currentAnimation = "EatFood";
         moveToScript.SetTarget("Food", GameObject.Find(aiName));
     }
 }

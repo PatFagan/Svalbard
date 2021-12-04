@@ -39,6 +39,7 @@ public class gChopWood : gGoapAction
     public override void RunAction()
     {
         print("chopping wood, cost: " + cost);
+        goapAgentScript.currentAnimation = "ChopWood";
         moveToScript.SetTarget("Wood", GameObject.Find(aiName));
     }
 }

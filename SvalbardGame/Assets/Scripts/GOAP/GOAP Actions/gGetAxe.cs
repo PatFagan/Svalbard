@@ -45,6 +45,7 @@ public class gGetAxe : gGoapAction
     public override void RunAction()
     {
         print("getting axe, cost: " + cost);
+        goapAgentScript.currentAnimation = "GetAxe";
         moveToScript.SetTarget("Axe", GameObject.Find(aiName));
     }
 }

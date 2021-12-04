@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class gGoapAgent : MonoBehaviour
 {
+    public string currentAnimation;
+
     public bool hasAxe;
     public bool isHungry;
 
@@ -30,7 +32,7 @@ public class gGoapAgent : MonoBehaviour
         if (collider.gameObject.tag == "Food")
         {
             print("eating...");
-            hungerTimer = 5000f;
+            hungerTimer = 600f;
             isHungry = false;
         }
         if (collider.gameObject.tag == "Axe")

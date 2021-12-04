@@ -9,6 +9,10 @@ TagManager:
   - Wood
   - Food
   - NPC
+  - GunCursor
+  - Bullet
+  - Target
+  - Snowmobile
   layers:
   - Default
   - TransparentFX
