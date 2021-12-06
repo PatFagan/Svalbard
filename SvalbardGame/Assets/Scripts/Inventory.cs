@@ -9,23 +9,15 @@ public class Inventory : MonoBehaviour
     public Image healthBar;
     bool inventoryMenuBool = false;
 
-    // items
-    int apples;
-    int wood;
-    // stats
-    public float health;
-    int warmth;
-    int hunger;
-    int thirst;
-    int energy;
+    public GameObject lootFeed;
+    public Dictionary<string, int> items = new Dictionary<string, int>();
 
-    // Start is called before the first frame update
     void Start()
     {
-        health = 1f;
+        items.Add("Apples", 0);
+        items.Add("Logs", 0);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Inventory"))
@@ -33,8 +25,10 @@ public class Inventory : MonoBehaviour
             inventoryMenuBool = !inventoryMenuBool;
             inventoryMenu.SetActive(inventoryMenuBool);
         }
+    }
 
-        //print(health);
-        healthBar.fillAmount = health;
+    public void GainItem(string name, int amount)
+    {
+
     }
 }
