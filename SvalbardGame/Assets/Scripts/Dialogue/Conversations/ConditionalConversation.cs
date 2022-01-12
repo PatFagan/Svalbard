@@ -17,7 +17,7 @@ public class ConditionalConversation : Conversation
 
             for (int i = 0; i < conditionKey.Length; i++)
             {
-                if (preconditions[conditionKey[i]] == false)
+                if (preconditions[conditionKey[i]] == true)
                 {
                     if (i == conditionKey.Length - 1)
                         return true;

@@ -12,7 +12,7 @@ public class DialoguePreconditions : MonoBehaviour
 
         // PIERRE
         preconditions.Add("HasMetCartographer", false);
-        preconditions.Add("DoesNotHaveTheMap", true);
+        preconditions.Add("HasPierresMap", false);
 
         // YIGS
         preconditions.Add("HasMetYigs", false);

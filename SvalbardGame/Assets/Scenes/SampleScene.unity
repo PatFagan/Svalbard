@@ -7872,7 +7872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6541a1d5487c4843accf59bcb9b3237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preconditionName: DoesNotHaveTheMap
+  preconditionName: HasPierresMap
   destroy: 1
 --- !u!212 &1953541135
 SpriteRenderer:
@@ -13764,15 +13764,21 @@ MonoBehaviour:
   conditionKey: []
   zeroConditions: 1
   sentences:
-  - zero conditions
-  - testing...
+  - 'PIERRE: Lovely weather, non?'
+  - 'PIERRE: I do love the endless day.'
+  - 'BEAR: Certainly makes finding all these trinkets easier.'
+  - 'PIERRE: Ha! Yes, well, carry on your trinket search then.'
   voiceActing:
+  - {fileID: 1857262799}
+  - {fileID: 1857262799}
   - {fileID: 1857262799}
   - {fileID: 1857262799}
   characterImages:
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
   - {fileID: 21300000, guid: a1b750c60256c9f48a93eba64bac1d5f, type: 3}
-  farewellDialogue: au revoir
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  farewellDialogue: Good luck, Paulo!
   farewellAudio: {fileID: 1857262799}
   questUpdates: 01000000
 --- !u!114 &3124599601787677147
@@ -13822,20 +13828,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
-  conditionKey:
-  - HasMetCartographer
-  - HasMetCartographer
-  zeroConditions: 0
+  conditionKey: []
+  zeroConditions: 1
   sentences:
-  - can you find my map
-  - please
+  - 'PIERRE: Oh, Paulo, you would not believe! '
+  - 'BEAR: What, Pierre?  '
+  - "PIERRE: Ma carte a disparu! It appears I may\u2019ve misplaced my map, it seems. "
+  - "PIERRE: Those blasted tree mongrels must\u2019ve nabbed it, merde! "
+  - "BEAR: Hm, that\u2019s quite a pickle, Pierre.  "
+  - 'PIERRE: You know les femmes called me Pierre de Pickle in high school.  '
+  - 'BEAR: I would expect nothing less, Pierre.  '
+  - "PIERRE: You wouldn\u2019t\u2019ve happened upon it though, non, mon amie? "
+  - "BEAR: Your pickle? No, I haven\u2019t seen it lying around anywhere.  "
+  - 'BEAR: You know, you should be careful where you put that thing, Pierre.  '
+  - 'PIERRE: Ha! Non non, not mon pickle, mon amie, ma carte!  '
+  - "BEAR: No, but I\u2019ll let you know if I find a misplaced and/or nabbed parchment
+    drifting about.  "
+  - 'BEAR: I do tend to see a lot of those in my day-to-day life.  '
+  - 'PIERRE: Merci beaucoup, Paulo! '
   voiceActing:
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
   - {fileID: 169579717}
   - {fileID: 169579717}
   characterImages:
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: a1b750c60256c9f48a93eba64bac1d5f, type: 3}
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
-  farewellDialogue: thankss
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: a1b750c60256c9f48a93eba64bac1d5f, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: a1b750c60256c9f48a93eba64bac1d5f, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: a1b750c60256c9f48a93eba64bac1d5f, type: 3}
+  - {fileID: 21300000, guid: a1b750c60256c9f48a93eba64bac1d5f, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: a1b750c60256c9f48a93eba64bac1d5f, type: 3}
+  - {fileID: 21300000, guid: a1b750c60256c9f48a93eba64bac1d5f, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  farewellDialogue: "\xC0 bient\xF4t, Paulo!"
   farewellAudio: {fileID: 169579717}
   questUpdates: 
 --- !u!114 &3124599601787677150
@@ -13879,18 +13920,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 0
   conditionKey:
-  - DoesNotHaveTheMap
+  - HasPierresMap
   zeroConditions: 0
   sentences:
-  - you found map
-  - thanks
+  - 'PIERRE: Paulo, you found her!'
+  - 'PIERRE: Genevieve, how I''ve longed for you...'
+  - 'BEAR: ...'
+  - 'PIERRE: I kid, Paulo.'
+  - 'PIERRE: Thank you greatly for this.'
+  - 'PIERRE: Come back soon and I''ll give you a full, updated map of Svalbard.'
+  - 'BEAR: Alright, thanks, Pierre.'
   voiceActing:
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
+  - {fileID: 169579717}
   - {fileID: 169579717}
   - {fileID: 169579717}
   characterImages:
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
   - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
-  farewellDialogue: mappp
+  - {fileID: 21300000, guid: a1b750c60256c9f48a93eba64bac1d5f, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: bb68066d213a02440beb35b626d73963, type: 3}
+  - {fileID: 21300000, guid: a1b750c60256c9f48a93eba64bac1d5f, type: 3}
+  farewellDialogue: De rien!
   farewellAudio: {fileID: 169579717}
   questUpdates: 
 --- !u!114 &4633505970961645342
