@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rigidbody;
     public Animator animator;
 
-    float MAX_SPRINT_GAUGE = 30f;
+    float MAX_SPRINT_GAUGE = 20f;
     float sprintGauge;
 
     Shooting shootingScript;
